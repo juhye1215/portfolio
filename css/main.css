@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+.etcWrap {width:1280px; margin:0 auto; position:relative; margin-top:-150px;}
+#etcAnchor {height:100px; display:block;}
+
+.etcWrap li{float:left; margin:5px; border:1px solid white; border-radius: 50%; opacity: 0.8; }
+
+#cboxLoadedContent img{max-height:700px !important; width:auto !important;}
+

@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0}
+li{list-style:none}
+img{display:block; width:100%;}
+a{ text-decoration:none; color:none;}
+
+.header_ext{width:100%; background-color:#19A4D1}
+#header{background-color:#19A4D1; padding-top:10px; position:relative; margin:0 auto; }
+
+/****************************************************header***********/
+.header_top{width:1280px; margin:0 auto;}
+.logo{width:200px; height:50px; float:left; margin-right:100px; margin-top:-20px}
+.search{ width:500px; height:30px; float:left; margin-top:10px;}
+.gnb{overflow: hidden; margin-top:20px; }
+.gnb ul{float:right; }
+.gnb li{color:white; width:90px; font-size:15px; float:left; text-align:center;}
+.gnb .fas{ font-size:30px}
+.gnb li:hover{color:#366}
+.gnb a{color:white}
+.gnb a:hover{color:#366}
+ 
+.hr{ width:100%; height:3px; background-color:white; margin-top:10px;}
+
+.lnb{ margin:0 auto; width:1280px;  }
+.lnb:after{content:''; display:block; clear:both;}
+
+.hamburger{float:left; width:30px; height:30px; margin-top:-45px;}
+.main_menu{float:left; width:100%;  margin-left:30px;  height:55px;}
+.main_menu li{width:15%; line-height:50px;  padding-right:10px; box-sizing:border-box;
+			font-size:25px; color:white; font-weight:bold; text-align:center; float:left;}
+
+			
+.sub_menu{width:100%;}
+.sub_menu ul{float:left; text-align:left; height:0;}
+.sub_menu>ul>li{color:black; line-height:50px; font-size:20px; background-color:white;
+				 display:block; text-decoration:none; padding-left:50px}
+.sub_menu li:last-child{border-bottom:1px solid #19A4D1}
+.sub_menu li{padding-left:20px;}
+.sub_menu li:hover{ text-decoration:underline}
+
+.oahu{width:1000px; margin-left:-750px; border-bottom:1px solid #19A4D1;}
+.oahu li div{padding-left:750px;}
+.maui{width:250px; margin-left:-40px; border-bottom:1px solid #19A4D1}
+.bigisland{width:350px; margin-left:-70px; border-bottom:1px solid #19A4D1 }
+.kauai{width:350px; margin-left:-130px; border-bottom:1px solid #19A4D1 }	
+.lanai{width:350px; margin-left:-160px; border-bottom:1px solid #19A4D1}	 
+.group{width:1000px; margin-left:1000px; border-bottom:1px solid #19A4D1}
+
+
+.main_menu li:hover{border:1px solid white;}
+.sub_menu a:hover{text-decoration:underline;}
+
+#chk {display:none;}
+#chk ~ .sub_menu {display:none;} 
+#chk:checked ~ .sub_menu{display:block;} 
+/*********************************************************sub main*********************/
+.main{overflow:hidden; width:1280px; margin:0 auto;}
+
+.title{width:1280px; margin:0 auto; font-size:35px; font-weight:bold; text-align:center}
+
+.list{float:left; width:340px; background-color:#EEE; margin-top:10px;}
+.list h3{ text-align:center; padding-top:10px; font-size:25px;}
+.menu_hr{width:320px; border:1px solid #19A4D1; margin:10px;}
+.list_menu li{font-size:25px; text-align:left; padding-left:10px; height:40px; line-height:40px; }
+.list_menu{margin:10px}
+.list_menu li:hover{color:white}
+.list_menu a{color:black;}
+.list_menu a:hover{color:white}
+
+.visual{float:left; width:900px; height:400px; margin-left:10px; margin-top:10px; overflow:hidden;}
+
+.visual img{ transition-property:all; transition-duration:0.5s;}
+.visual img:hover{transform:scale(1.1,1.1)}
+
+
+/****************************************************shop all*********************/
+.shop_title{font-size:30px; text-align:left; width:800px; float:left; margin:20px 10px}
+select{float:right; width:200px; height:40px; font-size:20px; border:2px solid #19A4D1; margin:20px 30px}
+
+.shop_hr{width:100%; height:2px; background-color:#19A4D1;}
+
+.pic{width:245px; height:400px; float:left; cursor:pointer; margin-left:10px; position:relative}
+
+/*그림위에 view버튼 만들기*/			
+button{height:0; width:0; font-size:0; background-color:white; border:1px solid #19A4D1; border-radius:10px; overflow:hidden;
+	transition-property:all; transition-duration:0.2s; position:absolute;top:150px; left:50px; cursor:pointer;}		
+.pic:hover button{height:50px; width:150px; line-height:50px; font-size:25px; text-align:center; }
+
+
+.pic1,.pic6,.pic11{margin-left:-10px;}
+.row1,.row2,.row3{margin-top:20px; overflow:hidden}
+
+.page_num{width:350px; margin:0 auto; overflow:hidden; margin-top:20px; margin-bottom:20px;}
+.page_num li{float:left; font-size:25px; text-align:center; width:50px;}
+.page_num li:hover{text-decoration:underline}
+
+/***********************************footer****************/
+.footer_ext{width:100%; background-color:#D8D8D8}
+#footer{width:1280px; margin:0 auto; overflow:hidden; }
+
+.foot{float:left; width:200px; }
+
+.foot li{font-size:20px; height:30px; line-height:30px; text-align:left;  }
+.foot li:first-child{font-size:25px; font-weight:bold; padding:20px 0;}
+
+.foot2{margin:0 0 0 50px; width:300px;}
+
+
+.footer_sns{float:left; width:500px; height:200px; margin-top:100px; margin-left:30px;}
+.footer_logo{width:200px; height:50px; margin:0 auto;}
+
+.sns{overflow:hidden; margin-top:30px; margin-left:120px;}
+.sns li{float:left; font-size:40px; padding-left:10px; color:#366; cursor:pointer}}
+.copyright{font-size:15px; margin-top: 20px; margin-left:30px;}
+
+.sns li:hover{color:white}
+.sns a{color:grey}
+.foot li:hover{text-decoration:underline; cursor:pointer}
+.foot li:first-child:hover{ text-decoration:none;}

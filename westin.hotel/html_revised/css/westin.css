@@ -1,0 +1,168 @@
+*{margin:0; padding:0;}
+html,body{font-family: 'Poppins', sans-serif;}
+img{border:0; display: block; width: 100% }
+li{list-style:none;}
+a{text-decoration:none; color:none}
+
+#wrap{width:1280px;margin:0 auto;}
+#header{z-index:100; padding-top:20px}
+.logo{ width: 200px; height: 30px; float: left; margin-right:20px; }
+
+#header>#gnb{position:relative;height:30px; margin: 10px 0; z-index: 100}
+#header>#gnb>li{width:150px;float:left;text-align:left; margin: 10px 0; font-size: 20px; }
+#header>#gnb>li>ul{width:700px; height:300px; position:absolute;left:0;top:70px;
+    background:#fff; opacity: 0.95; padding:0 1px;display:none;}		
+#header>#gnb>li>ul>li{width: 250px; text-indent: 5px; }
+
+#header #gnb li.m1 ul{left:0; background-image:url(../img/career.png);
+    background-repeat: no-repeat; background-size:auto; background-position-x: right}
+#header #gnb li.m2 ul{left:150px; background-image:url(../img/worldmap.png);
+    background-repeat: no-repeat; background-size:auto; background-position-x: right}
+#header #gnb li.m3 ul{left:300px; background-image:url(../img/offers.png);
+    background-repeat: no-repeat; background-size:auto; background-position-x: right}
+#header #gnb li.m4 ul{left:450px;background-image:url(../img/dining.png);
+    background-repeat: no-repeat; background-size:auto; background-position-x: right}
+#header #gnb li.m5 ul{left:600px;background-image:url(../img/flower.png);
+    background-repeat: no-repeat; background-size:auto; background-position-x: right}	
+#header #gnb li.m6 ul{left:750px;background-image:url(../img/family.png);
+    background-repeat: no-repeat; background-size:auto; background-position-x: right}	
+
+#header>#gnb>li>ul>li>a{display:block; padding:8px; color: grey;}
+#header>#gnb>.m1>ul>li>a:hover,#header>#gnb>.m1>ul>li>a:active,#header>#gnb>.m1>ul>li>a:focus
+{color:#666;background:#9FF8FF}
+#header>#gnb>.m2>ul>li>a:hover,#header>#gnb>.m2>ul>li>a:active,#header>#gnb>.m2>ul>li>a:focus
+{color:#666;background:#8FDFE5}
+#header>#gnb>.m3>ul>li>a:hover,#header>#gnb>.m3>ul>li>a:active,#header>#gnb>.m3>ul>li>a:focus
+{color:#666;background:#83CCD2}
+#header>#gnb>.m4>ul>li>a:hover,#header>#gnb>.m4>ul>li>a:active,#header>#gnb>.m4>ul>li>a:focus
+{color:white;background:#6EABB0}
+#header>#gnb>.m5>ul>li>a:hover,#header>#gnb>.m5>ul>li>a:active,#header>#gnb>.m5>ul>li>a:focus
+{color:white;background:#6EABB0}
+#header>#gnb>.m6>ul>li>a:hover,#header>#gnb>.m6>ul>li>a:active,#header>#gnb>.m6>ul>li>a:focus
+{color:white; background:#5C9094}
+
+
+.reserve{float: right; width: 150px; height: 30px; border: none; margin: 10px 0;
+    background-color:#7cccd2; color: white; font-size: 20px}
+
+.top_btn{ width:50px; height: 50px; background-color: #7cccd2; color:white; text-decoration:none;
+  text-align: center; line-height: 50px; font-size: 15px; position: fixed; right: 0; bottom: 10%;
+ cursor: pointer; display: none;}
+ .top_btn a{color:white}
+
+/**************************main visual***********************************/
+
+#visual{width: 100%; position: relative; margin: 0 auto;}
+#banner{ padding: 30px 0 }
+
+.frame{width: 100%; height: auto;  overflow: hidden; position: relative;}
+.frame ul{ width:100% }  
+.frame li{width: 100%;}
+.frame li.on{display: block}
+
+.left{position: absolute; left: 15px; top: 275px}
+.right{position: absolute; right: 15px; top: 275px}
+
+#list_btn{margin: 0 auto; width: 70px;}
+#list_btn a{ width: 30px; height: 30px; display: block; float: left;}
+
+/************************W***********************************/
+#w{position: relative; margin: 0 auto; width: 1280px;}
+#w div img{width:300px; height:300px; transform: rotate(45deg)}
+
+.wellbeing1{position: absolute; top:-20px; left: 0;}
+.wellbeing3{position: absolute; top:-20px; left: 500px;}
+.wellbeing5{position: absolute; top:-20px; left: 1000px;}
+.wellbeing2{position: absolute; top:200px; left:250px}
+.wellbeing4{position: absolute; top:200px; left:750px}
+
+
+/*******************featured hotel and resort******************************/
+.hotels_ext{width:100%; background-image:url(../img/background.jpg); 
+    background-size:100%; height:auto; background-repeat:no-repeat; margin-top: 250px}
+#hotels{ position: relative; margin: 0 auto; width: 1280px; }
+
+.title{text-align: center; font-size:40px; font-weight: 600; 
+     position: absolute; top:350px; margin: 0 auto; width: 1280px}
+.hotel1,.hotel2{margin-top: -277px}
+.hotel1{float: left; width: 600px; height:580px; position: absolute; top: 600px; left: 0 ;}
+.hotel2{float: left; width: 600px; height:530px; position: absolute; top: 655px; right: 0 }
+
+.toggler,.toggler2 { width: 590px; height: 0; position: relative; top:-210px; left: 0; }
+#button,#button2 { padding: .5em 1em; text-decoration: none; cursor: pointer;
+        background-color:white; border:1px solid grey; font-size: 15px;}
+#effect,#effect2  { width: 590px; height: 70px; padding: 0.4em; position: relative;  text-align: center;
+        background:white; opacity: 0.8; color:darkblue; overflow: hidden; }
+#effect h3,#effect2 h3  { margin: 0; padding: 0.4em; text-align: center; color:black}
+
+/****************************Offers**************************/
+#offers{width: 1280px; margin: 0 auto; overflow: hidden;}
+.title2{text-align: center; font-size:40px; font-weight: 600; margin-top:1000px}
+
+.gateway li{float: left; width: 400px; height: 300px; position: relative; }
+.gateway_txt{width: 400px; height: 220px; display: none; border-radius: 15px; position: absolute; top: 0; left: 0;
+    background:white; opacity:0.8;  font-size:25px; text-align:center; padding-top:80px; display: none;}
+.yellow{color:red}
+.go{ width: 60px; height: 60px;  background-color:#7cccd2; cursor: pointer;
+    color: white; font-size: 20px; border-radius: 50% 50%; border: none;}
+.go a{color: white;}    
+
+.gateway li:nth-child(2){margin: 0 30px;}
+.gateway li:nth-child(5){margin: 0 30px;}
+.gateway li:nth-child(3){margin-bottom: 20px; width: 400px;}
+
+.gate1:hover .txt1{display:block}
+.gate2:hover .txt2{display:block}
+.gate3:hover .txt3{display:block}
+.gate4:hover .txt4{display:block}
+.gate5:hover .txt5{display:block}
+.gate6:hover .txt6{display:block}
+
+
+/*****************search moldives***********************/
+#search{ width: 100%; margin-top: 50px; }
+
+.boat img{ width: 100%; height: 100%;}
+.ocean{ height: 200px; position: relative;}
+.boat{position: absolute; top: 45%; right: 0}
+
+.inputbox_ext{position: relative; margin: 0 auto; width: 1280px; }
+.inputbox{width: 1200px; height: 140px; background-color:#50808e;
+    border-radius: 20px; position: absolute; top: -50px;  }
+
+.inputbox ul{margin:30px 50px}   
+.inputbox li{float: left; width: 300px; height: 30px; line-height: 30px; 
+    color:white; font-size: 25px; font-weight: 200; text-indent: 15px;}   
+.inputbox li:nth-child(3){width: 150px}  
+.inputbox li:first-child{margin-right: 50px}  
+.inputbox li:last-child button{width: 200px; height:40px; border-radius: 20px; margin: 20px 50px;
+     background:#7bcbd4; color: white; font-size: 25px; border: none } 
+
+.inputbox input{height: 35px; width: 250px; margin-top: 10px; font-size: 18px; border: none; color: grey}
+.inputbox li:nth-child(2) input{width: 200px; text-indent: 10px; }
+.inputbox li:nth-child(3) input{width: 150px; } 
+.inputbox input{text-indent: 15px; color: cadetblue}
+
+/****************join the membership***********************/
+#membership{ width: 1280px; margin: 0 auto; margin-bottom: 500px }
+.title3{text-align: center; font-size:40px; font-weight: 600; margin-top: 250px }
+
+.mb_banner li{float: left; margin-top:20px; width:380px; height: 350px; box-sizing: border-box}
+.mb_banner img{transition-property: all; transition-duration: 0.5s}
+.mb_banner img:hover{transform:scale(1.1,1.1)}
+.mb_banner li:nth-child(2){margin-right: 40px}
+
+
+/*************footer********************/
+#footer_ext{width: 100%; background:#b2c4ce; }
+#footer{ width:1280px; margin: 0 auto;}
+.footer_logo{ width: 780px; height: 180px; margin: 0 auto;  }
+.copyright{font-size: 15px; margin: 0 auto;  text-align: center; padding: 10px 0; margin-top: 230px}
+
+.foot{float: left; width: 400x; padding-left: 150px; margin-bottom: 30px}
+.foot li:first-child{font-weight: 500; font-size: 20px; padding: 10px 0; text-decoration:none;}
+
+.foot3 li{ font-size: 30px;}
+.fab{float: left; width: 50px; text-align: center; }
+.fab:hover{font-size:40px; }
+.foot li:hover{text-decoration: underline; }
