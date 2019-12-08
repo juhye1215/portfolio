@@ -66,7 +66,7 @@ li{list-style:none;}
 #btn{ width: 100px; height: 30px; border: 1px solid white; color: white;  
     font-size: 20px; background: none; cursor: pointer;}
 .bio1 li{padding: 5px 0;}
-.bio2 li{font-size: 23px; padding: 5px 0; list-style: none;}
+.bio2 li{font-size: 25px; padding: 5px 0; list-style: none;}
 
 .bio1,.bio2{display:none; width: 550px; height: 260px; padding: 70px 40px; text-align: left;font-family: 'Questrial', sans-serif;  font-size:25px}
 
