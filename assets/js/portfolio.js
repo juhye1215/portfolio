@@ -14,3 +14,11 @@ $( function() {
       state = !state;
     });
   } );
+
+  function playVid() {
+    var video = document.querySelector('video');
+    video.addEventListener('click',function() {
+        this.play();
+    },false);
+}
+window.onload = playVid;
