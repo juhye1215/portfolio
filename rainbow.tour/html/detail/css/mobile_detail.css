@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0; padding:0}
+li{list-style:none}
+img{display:block; width:100%;}
+a{color:none; text-decoration:none;}
+
+/*************************************header************/
+
+#header{position:relative; background-color:#19A4D1;}
+
+#check_mob{display:none;}
+#check_mob ~.menu{display:none}
+#check_mob:checked ~.menu{display:block;}
+
+.logo{float:left; width:30%; margin-top:3%; margin-left:10px;}
+
+.gnb{float:left; width:42%; margin-left:13%; margin-top:4%;}
+.gnb li{ width:28%; font-size:10px; float:left; text-align:center; color:white; padding-left:5px;}
+.gnb .fas{font-size:25px}
+.gnb a{color:white}
+
+.hamburger{float:right; width:7%; margin:20px 5px; }
+.menu{overflow:hidden; width:100%; margin:0 auto; }
+.menu li{font-size:25px; padding-left:20px; text-align:left; color:black; background-color:white;}
+.menu li:active{ text-decoration:underline; }
+
+
+/**********************************main image*********/
+
+.visual{width:100%; margin:0 auto;}
+.tab_pic img{ width:100%;}
+.sheet img{width:100%}
+
+
+#tab1,#tab2,#tab3,#tab4,#tab5{display:none}
+
+#tab1 ~.big1{display:none}
+#tab1:checked ~.big1{display:block;}
+#tab1:checked~.tab_round>.round1{background-color:#19A4D1; }
+
+#tab2 ~.big2{display:none}
+#tab2:checked ~.big2{display:block;}
+#tab2:checked~.tab_round>.round2{background-color:#19A4D1; }
+
+#tab3 ~.big3{display:none}
+#tab3:checked ~.big3{display:block;}
+#tab3:checked~.tab_round>.round3{background-color:#19A4D1; }
+
+#tab4 ~.big4{display:none}
+#tab4:checked ~.big4{display:block;}
+#tab4:checked~.tab_round>.round4{background-color:#19A4D1; }
+
+#tab5 ~.big5{display:none}
+#tab5:checked ~.big5{display:block;}
+#tab5:checked~.tab_round>.round5{background-color:#19A4D1; }
+
+.round1,.round2,.round3,.round4,.round5{ 
+width:18px; height:18px; float:left; border-radius:100px; background-color:#ccc; margin:5px}
+
+.tab_round{margin-left:30%; margin-bottom:10px;}
+
+/******************************************main detail *****************/
+
+
+.detail{ width:100%;}
+h1{padding:30px 20px 0 20px; font-size:28px;}
+.star{color:gold; font-size:20px; padding:10px 20px; text-align:right}
+.review{font-size:15px; color:blue; }
+.price{font-size:30px; color:red; }
+.comment{font-size:15px; color:black; }
+.star5{ width:100%; text-align:left}
+
+
+select,.date,.time{width:65%; height:30px;font-size:20px; text-align:center; 
+					border:1px solid #19A4D1; color:black; margin:10px 5px}	
+									
+.time{ margin-bottom:20px;}
+.adult{margin-top:15px;}
+
+.text{float:left; }
+.title{font-size:22px; margin:15px 5px; width:100x; height:30px; line-height:30px; padding-left:30px; }
+.clock{margin-top:20px;}
+.calendar{margin-top:22px}
+
+#chk1,#chk2{display:block; width:20px; height:20px; margin-left:40px; float:left;}
+.check_tab1,.check_tab2{width:100%; height:10px; line-height:10px;  
+		margin:15px 10px; font-size:18px; padding:10px 0; }
+
+
+.btn{ margin:25px 10px;}
+
+.cart{background-color:#19A4D1; color:white; font-size:20px; font-weight:bold; text-align:center;
+		width:90%; height:50px; margin:10px 20px;}	
+.save{background-color:white; border:2px solid #19A4D1; font-size:20px; font-weight:bold; text-align:center;
+		width:90%; height:50px; margin:10px 20px;}	
+		
+		
+/******************************************information************************/	
+.main{overflow:hidden; width:100%; margin:0 auto;}
+
+#chk11,#chk22,#chk3,#chk4{display:none}
+
+#chk11 ~.write1{display:none}
+#chk11:checked ~.write1{display:block;}
+#chk11 ~.plus1{display:block;border:2px solid #19A4D1;}
+#chk11 ~.minus1{display:none;background-color:#19A4D1; color:white;}
+#chk11:checked ~.plus1{display:none;}
+#chk11:checked ~.minus1{display:block}
+
+#chk22 ~.write2{display:none}
+#chk22:checked ~.write2{display:block;}
+#chk22 ~.plus2{display:block;border:2px solid #19A4D1;}
+#chk22 ~.minus2{display:none;background-color:#19A4D1; color:white;}
+#chk22:checked ~.plus2{display:none;}
+#chk22:checked ~.minus2{display:block}
+
+#chk3 ~.write3{display:none}
+#chk3:checked ~.write3{display:block;}
+#chk3 ~.plus3{display:block;border:2px solid #19A4D1;}
+#chk3 ~.minus3{display:none;background-color:#19A4D1; color:white;}
+#chk3:checked ~.plus3{display:none;}
+#chk3:checked ~.minus3{display:block}
+
+
+#chk4 ~.write4{display:none}
+#chk4:checked ~.write4{display:block;}
+#chk4 ~.plus4{display:block; border:2px solid #19A4D1;}
+#chk4 ~.minus4{display:none; background-color:#19A4D1; color:white;}
+#chk4:checked ~.plus4{display:none;}
+#chk4:checked ~.minus4{display:block}
+
+
+.plus1,.minus1,.plus2,.minus2,.plus3,.minus3,.plus4,.minus4{ width:90%; height:40px; 
+line-height:40px; font-size:25px; padding-left:20px; margin:0 auto; text-align:left;  margin-bottom:10px;}
+.mini_plus,.mini_minus{width:30px; height:30px; margin:5px 10px; float:right}
+
+.txt{overflow:hidden; width:90%; margin:0 auto; font-size:15px; text-align:left; padding:10px;}
+
+summary{margin:10px 0; height:30px; font-size:15px; line-height:30px; background-color:#F1F0FF;}
+
+/***************************************related product***********/	
+.related{width:100%; margin:5px 10px; overflow:hidden; }
+
+.rlt_title{font-size:25px; font-weight:bold; text-align:left; margin:20px 0 15px 10px;}
+.hr_low{ width:100%; margin:0 auto; height:3px; background-color:#19A4D1; margin-bottom:20px;}
+
+.motion1,.motion2,.motion3{width:30%; float:left}
+.motion2{margin:0 10px;}
+	
+				  
+/***********************************footer****************/
+
+#footer{width:100%; background-color:#D8D8D8;}
+
+.foot{width:70%; margin:20px}
+
+.foot li{font-size:15px; height:20px; line-height:20px; text-align:left;}
+.foot li:first-child{font-size:20px; font-weight:bold; padding:10px 0;}
+
+.footer_sns{width:70%}
+.footer_logo{width:80%; margin:10px 20px}
+
+.sns{overflow:hidden; margin-left:30px;}
+.sns li{float:left; font-size:25px; padding-left:10px; color:#366;}
+.copyright{font-size:12px; margin-top: 20px; margin-left:30px;}
+
+
+/**view more button**/
+#chk_foot{display:none;}
+#chk_foot ~.foot{display:none}
+#chk_foot:checked ~.foot{display:block;}
+
+#chk_foot ~.more{display:block;}
+#chk_foot ~.less{display:none;}
+#chk_foot:checked ~.more{display:none}
+#chk_foot:checked ~.less{display:block}
+
+.more,.less{font-size:20px; font-weight:bold; margin:20px;}
+.foot{width:70%; margin:20px; overflow:hidden;}
+.foot li{font-size:15px; height:20px; line-height:20px; text-align:left;}
+.foot li:first-child{font-size:20px; font-weight:bold; padding:10px 0;}
+.foot li:active{ text-decoration:underline; }

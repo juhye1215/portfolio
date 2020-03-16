@@ -1,0 +1,254 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0; padding:0;}
+html,body{height:100%; font-family:'Saira', sans-serif;}
+img{display:block; width:100%;}
+li{list-style:none;}
+a{text-decoration:none}
+
+
+/**************************header******************************/
+
+#header{margin:0 auto; margin-top:20px; height:50px; position:relative;}
+.header_ext{width:100%; height:100px; background-color:white}
+
+nav:after{content:''; display:block; clear:both;}
+
+.logo{float:left; width:20%; margin-left:20px; margin-bottom:20px;}
+
+.menu_web li{float:left; margin-left:30px; height:30px; line-height:30px; text-align:center; 
+		font-weight:bold; margin-top:30px;}
+.donate{float:left; width:100px; height:30px; color:white; text-align:center;font-weight:bold; 
+		background-color:#f8b551; margin-top:30px; font-size:15px;}
+.hamburger img{float:right; width:30px; height:30px; margin:30px 20px 0 20px}
+.menu_web li:hover{ border-bottom:2px solid #f8b551; border-bottom-width:thick }		
+
+
+#chk{display:none}
+#chk~.menu_mobile{display:none}
+#chk:checked ~.menu_mobile{display:block;}
+	
+.menu_mobile ul{ height:0; width:100%; }
+.menu_mobile li{ font-size:20px;  padding-left:30px; background-color:white; box-sizing:border-box;}
+.menu_mobile li:first-child{padding-top:60px;}
+.menu_mobile li:nth-child(2),.menu_mobile li:nth-child(3),.menu_mobile li:nth-child(4){ opacity:0.9}
+.menu_mobile li:active{ color:orange }
+
+/*********************visual**********************************/
+#main{margin:0 auto; }
+
+.animal_ext{margin:0 auto; position:relative;}
+.animal_face{ width:100%; position:absolute; top:-50px; margin-left:28%;}
+
+.ani{ width:10%; height:150px; float:left; margin-right:25px; }
+.lion{margin-left:20px;}
+.ani img{ transition-property:all; transition-duration:0.5s; }
+.ani img:hover{ transform:scale(1.2,1.2)}
+
+.animal_text{font-size:23px; font-weight:bold; text-align:center}
+#ani_btn{color:grey; background-color:white; border:1px solid grey; text-align:center; font-size:15px; font-weight:bold;
+	width:100px; height:25px;}
+#ani_btn:hover{background-color:grey; color:white;}
+
+/*********************************************main contents***********************/
+.mt_ext{overflow:hidden}
+.mt{ margin:100px 0 10px 0; background-image:url(../img/gr_bg_1440.png); background-size:100%; height:100%;
+ background-repeat:no-repeat;}
+.contents{margin:0 auto; padding-top:300px; width:100%; overflow:hidden}
+
+.together{width:100%; margin:0 auto; color:#f8b551; font-size:40px; font-weight:bold; padding:30px 0; text-align:center}
+.org{color:white}
+
+.icon{float:left; width:33%; margin:0 auto;}
+.icon img{width:100px; height:100px; margin:0 auto; padding:15px 0; }
+.icon_text{font-size:23px; text-align:center; color:white; box-sizing:border-box}
+.icon:hover{border:1px solid white;}
+
+.font30{ font-size:30px; font-weight:bold;}
+
+/**********************************************************our news******************/
+.our_news{ margin:80px 0 0 20px; overflow:hidden}
+
+.title{ width:80%; margin:0 auto; font-size: 25px; text-align:center; color:white}
+.big{ font-size:40px; font-weight:bold; }
+.hr{ width:100px; height:5px; background-color:#f8b551; margin:0 auto; margin-top:20px; margin-bottom:50px; }
+
+.article{ width:100%; margin:0 auto;}
+.artc1,.artc4,.middle{float:left}
+.artc2{ margin-bottom:20px;}
+.middle{ margin:0 40px;}
+.art{ position:relative}
+
+.txt{ width:100%; height:75px; color:white; font-size:23px; text-align:center; background-color:#333; opacity:0.7; 
+position:absolute; bottom:0 ;left:0; overflow:hidden;padding-top:5px; transition-property:height; transition-duration:0.5s; }
+.txt:hover{ height:170px;}
+.tiny{ font-size:15px; font-weight:bold;}
+
+.read_btn{ width:30%; height:35px; line-height:35px; color:black; background-color:#f8b551; font-size:18px; text-align:center}
+
+/*****************************************************banner*****************/
+.banner{ width:100%; margin:0 auto; margin-top:40px;}	
+/*************************************how you can help****************/
+.how{width:100%; margin:0 auto; margin-top:30px; overflow:hidden}
+.how_title{width:100%; margin:0 auto; font-size: 25px; text-align:center; color:grey; float:left;}
+.green{ color:#2e643e;} 
+.kitty{float:left; margin-left:850px; margin-top:-100px}
+.kitty img{width:100%;}
+.kitty img:hover{ transform:scale(1.2,1.2); }
+.horizen{margin-top:120px;}
+
+.cat_dog_chick{margin:0 auto;}
+
+.help1_ext{ width:100%; background-color:#e7f8ee; overflow:hidden; margin-top:-30px }
+.help2_ext{ width:100%; background-color:#ddebe1; overflow:hidden; }
+.help3_ext{ width:100%; background-color:#ccd9d0; overflow:hidden; }
+
+
+.help1,.help2,.help3{margin:0 auto;}
+.cat,.dog,.chick{ width:90%; overflow:hidden}
+.how_text{ width:90%; font-size:20px; text-align:center}
+.etc1{margin:50px 10px 30px 50px; }
+.etc2{margin:50px 50px 10px 10px; }
+.etc3{margin:50px 10px 10px 50px; }
+.blue{font-size:25px; font-weight:bold; color:#005a8b}
+.view_btn{ width:30%; height:35px; line-height:35px; margin:0 auto; background-color:#f8b551; text-align:center; font-size:20px; color:white;}
+.view_btn:hover{ background-color:white; border:2px solid #f8b551; color:black;}
+
+.cat img:hover{ transform:scale(1.1,1.1); }
+.dog img:hover{ transform:scale(1.1,1.1)}
+.chick img:hover{ transform:scale(1.1,1.1)}
+
+				/***************subscribe************/
+
+.subscribe{width:100%; height:auto; background-color:#123815; margin:20px 0}
+.ladybug{margin:0 auto}
+
+.typein{ width:50%; margin-top:-400px; font-size:20px; color:white; padding-left:40px}
+.email{ width:98%; height:30px; margin-bottom:10px;} .email:hover{ background-color:#cdf8e5; color:black;}
+.name{ width:60%; height:30px; margin-bottom:10px; } .name:hover{ background-color:#cdf8e5; color:black;}
+.get{ width:38%; height:33px; font-size:20px; background-color:#cdf8e5}
+.get:hover{ background-color:white; color:black; border:2px solid #cdf8e5;}
+		
+		/***************donation***********/
+.donation_ext{ width:100%; height:auto; margin: 20px 0; background-color:#4e2923 }
+.donation{ margin:0 auto;}
+
+/**********************************************footer******************/
+.footer_ext{ width:100%; background-color:#f3f3f3; }
+#footer{ margin:0 auto;  margin-top:20px; overflow:hidden}
+.ft{ width:19%; padding-top:20px; margin-left:20px; margin:0 auto;}
+.ft li{ font-size:15px; text-align:left; }
+.ft li:first-child{ font-weight:bold; font-size:20px;}
+.ft li:hover{color:#546fb4}
+.foot4 img{ width:60%; margin:0 auto}
+.foot4 li{ width:100%; margin:0 auto; text-align:center; }
+
+.sns li{font-size:25px; text-align:center}
+.ft_list{overflow:hidden}
+.copyright{ text-align:center; font-size:12px; margin-top:50px; }
+
+
+#chk_foot{display:none; }
+.more,.less{display:none;}
+
+
+/*****************************Responsive***********************/
+
+@media only screen and (min-width:321px) and (max-width:600px){
+.donate{float:right; width:20%; margin-top:-1px; float:left; margin-left:95px} 
+.hamburger img{margin-top:-1px;} .icon img{ width:50px; height:50px;}
+.together{font-size:25px; margin-top:-170px; padding:15px 0} .font30{ font-size:18px} .contents{ width:100%; margin-top:-50px;}
+.icon{ width:33%;} .title,.how_title{ font-size:18px;}  .big,.green{ font-size:25px;}
+.kitty{ margin-left:320px; margin-top:-60px}
+.cat,.dog,.chick{ width:100%;} .how_text{display:none}
+.typein{width:90%; font-size:12px; padding-left:20px; margin-top:-250px;} .get{font-size:13px;}
+}
+
+
+
+@media only screen and (min-width:601px) and (max-width:768px){
+.donate{float:right; width:15%; float:left; margin-left:330px;} 
+.menu_mobile li:first-child{padding-top:90px;} .contents{ padding-top:100px;} .icon img{ width:80px; height:80px;}
+.font30{ font-size:22px} .together{font-size:30px} .title,.how_title{ font-size:22px;}  .big,.green{ font-size:30px;}
+.kitty{ margin-left:550px; margin-top:-80px} 
+.cat,.dog,.chick,.how_text{float:left;} .cat,.dog,.chick{ width:40%;} 
+.how_text{width:48%; font-size:13px; }
+.etc1{ margin:50px 10px 10px 20px  }
+.etc2{margin:30px 50px 10px 10px; }
+.etc3{margin:30px 10px 10px 50px; }
+.view_btn{ display:none} 
+.typein{width:80%; font-size:15px; padding-left:20px; margin-top:-400px;} .get{font-size:15px;}
+}
+
+
+
+/***폰+태블릿***/
+@media only screen and (max-width:768px){
+.logo{width:30%;} .menu_web{display:none} .mt{ background-size:auto;}
+.visual{display:none;} .animal_text{display:none}
+.animal_face{ width:100%; position:absolute; top:-20px; margin-left:10%;}
+.ani{ width:18%; height:100px; float:left; margin-right:15px; } .disapear{display:none;}
+.mobile_visual{margin-top:-100px;} 
+.artc1,.artc4{ display:none;} .middle{ width:100%; margin:0 auto;}
+.hr{ width:70px; height:5px; background-color:#f8b551; margin:0 auto; margin-top:10px; margin-bottom:25px; }
+.horizen{ width:60px; height:5px; background-color:#f8b551; margin:0 auto; margin-top:80px; margin-bottom:25px;}
+.web_banner{ display:none;}	 .kitty img{ width:100px;} .web{display:none} .ft li{ font-size:13px}
+.ft li:first-child{ font-size:15px;} .sns li{font-size:25px;}
+
+/**view more button**/
+#chk_foot{display:none; }
+#chk_foot ~.foot1{display:none}
+#chk_foot:checked ~.foot1{display:block;}
+#chk_foot ~.foot2{display:none}
+#chk_foot:checked ~.foot2{display:block;}
+#chk_foot ~.foot3{display:none}
+#chk_foot:checked ~.foot3{display:block;}
+#chk_foot ~.sns{display:none}
+#chk_foot:checked ~.sns{display:block;}
+
+#chk_foot ~.more{display:block;}
+#chk_foot ~.less{display:none;}
+#chk_foot:checked ~.more{display:none}
+#chk_foot:checked ~.less{display:block}
+.more,.less{font-size:20px; font-weight:bold; margin:20px; width:100% ; text-align:center; }
+}
+	
+
+/*웹- 저해상도**/	
+@media only screen and (min-width:769px) and (max-width:1279px){
+#header,#footer{ width:100%;} .hamburger,#chk{display:none}
+.ani{ width:15%; height:180px;}
+.animal_face{ width:100%; margin-left:20%} .contents{padding-top:200px}
+
+.donate{float:right; margin-right:20px} .together{color:white;} .org{color:#f8b551}
+.mobile_visual{display:none;} .visual{width:100%; }
+.visual_ext{ width:100%; background-color:white;}
+.article,.contents{ width:100%;} .artc1,.artc4{ width:30%;} .middle{ width:35%; margin:0 10px} .tx3,.tx4{ font-size:21px}
+.read_btn{ width:40%; height:40px; line-height:40px;}
+
+.banner{ width:100%; } .mobile_banner{display:none;}
+.how{ width:100%;} .mobile{display:none}
+.help1,.help2,.help3{ width:100%; margin:0 auto}
+.cat,.dog,.chick,.how_text{float:left;} .cat,.dog,.chick{ width:48%;} .how_text{width:40%; font-size:15px;}
+.view_btn{font-size:15px}
+.ladybug,.donation{ width:100%;} .subscribe{ height:450px} 
+.typein{width:60%; font-size:15px; padding-left:20px; margin-top:-330px;}
+.ft{float:left;} .foot1{margin-left:30px}
+}
+	
+	
+/*웹- 고해상도**/		
+@media only screen and (min-width:1280px){
+#header,#footer{ width:1280px;}
+.hamburger,#chk{display:none}
+.donate{float:right} .together{color:white;} .org{color:#f8b551}
+.mobile_visual{display:none;} .visual{width:1440px; margin:0 auto;}
+.visual_ext{ width:100%; height:500px; background-color:white; background-repeat:repeat-x }
+.article,.contents{ width:1280px;} .banner{ width:1440px; } .mobile_banner{display:none;}
+.how{ width:1280px;} .mobile{display:none}
+.help1,.help2,.help3{ width:1280px; margin:0 auto}
+.cat,.dog,.chick,.how_text{float:left;} .cat,.dog,.chick{ width:48%;} .how_text{width:40%}
+.ladybug,.donation{ width:1280px;} .subscribe{ height:570px}
+.ft{float:left;} 
+}
