@@ -2307,9 +2307,9 @@ input, select, textarea {
 		}
 
 		#footer .copyright {
-			margin: 0
-			font-size: 12px;
-		}
+			margin: 0;
+			font-size: 12px;}
+		
 
 
 /* Poptrox */
@@ -2811,7 +2811,7 @@ input, select, textarea {
 			width: 100%; 
 		  }
 		.overlay { display: none;
-		
+	
 		  }
 		 #mobile-btn{padding:0;}	
 
@@ -2843,5 +2843,3 @@ input, select, textarea {
 			.poptrox-popup .closer {
 				opacity: 0.5;
 			}
-
-	}
