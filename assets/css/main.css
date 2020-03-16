@@ -2810,11 +2810,8 @@ input, select, textarea {
 		.portfolio {
 			width: 100%; 
 		  }
-		.overlay {
-			height:auto;
-			width: 100%;
-			background-color: #57606f;
-			margin: 0 auto;
+		.overlay { display: none;
+		
 		  }
 		 #mobile-btn{padding:0;}	
 
