@@ -2021,10 +2021,7 @@ input, select, textarea {
 	right: 0;
 	bottom: 0;
 	min-width: 100%; min-height: 100%;
-}
-
-.confetti-video{display: block;}
-.confetti-mobile{display: none;}
+}	
 
 	#header {
 		-moz-transition: opacity 2s ease-in-out;
@@ -2466,8 +2463,7 @@ input, select, textarea {
 				padding: 10em 0 12em 0;
 			}
 			.mobile{display: none;}
-		}
-	
+	}
 
 	/* 웹에서는 코드보기 버튼 가리기**/
     #mobile-btn{display: none;}
@@ -2591,11 +2587,8 @@ input, select, textarea {
 			}
 			.web{display: none;}
 			
-			.confetti-video{display: none; }
-			.confetti-mobile{display: block;}
 
-
-/* Narrow (ipad) */		/* Banner 
+/* Narrow (ipad) */		/* Banner */
 
 
 			#banner {
@@ -2745,7 +2738,7 @@ input, select, textarea {
 
 /* Mobile *//* Header */ 
 
-			#header { height: 600px;
+			#header {
 				padding: 6em 0 6em 0;
 			}
 
@@ -2780,15 +2773,14 @@ input, select, textarea {
 						background-size: 45px 33px;
 					}
 			.web{display: none;}
-			#header .mobile{display: block;
-							height: auto;}
+			#header .mobile{display: block;}
 		
 		
 /* Mobile *//* Banner */
 			.banner-bg{height: auto; background-position:covers;} /**모바일 화면에서 파란색bg****/
 			#banner {
 				padding: 1% 0 0 0;
-				background-size: 100%;
+				background-size: 50%;
 			}
 
 
@@ -2808,7 +2800,7 @@ input, select, textarea {
 		
 				#banner p a{background-color: transparent; color:yellow; }
 
-				#banner .mypicture p{width: 70%; text-align: justify; font-size: 15px;}
+				#banner .mypicture p{width: 70%; text-align: justify;}
 				#banner .mypicture img {width: 60%;} /**내사진***/
 
 				#banner .myskills li{width: 25%; } /**my skill icons*/
@@ -2849,5 +2841,5 @@ input, select, textarea {
 				}
 
 			.poptrox-popup .closer {
-				opacity: 0.5; }
-			
+				opacity: 0.5;
+			}
