@@ -1,0 +1,86 @@
+/**style.css***/
+
+*{margin: 0; padding:0;}
+
+html,body{color: #6c6f73 ;
+    height: 100%;}
+
+body{-webkit-font-smoothing:antialiased;
+    text-rendering: optimizeLegibility;  }  /**모바일 비율에 따라 폰트 조절**/
+
+img{ max-width: 100%;}
+
+blockquote{font-size: 1.6rem; 
+           color:#333;
+           border: none;}
+
+
+
+/***메인배너*/
+
+main{ background:url('img/orora.jpg') center center no-repeat; 
+       background-size: cover;
+       color: white;
+       height: 100%;
+       display: flex;
+       align-items: center; 
+}
+
+.banner-caption{ max-width: 50%;
+                text-align: center;
+                margin: 0 auto;}
+
+
+/**1****/      
+section{ padding:5% 10%; }
+
+video{width: 100%;
+     height: 100%;
+    padding-right: 30px;}
+
+/**2****/
+.dark-feature{ background-color:rgb(23, 102, 112) ;
+               color: white;}   
+
+#feature2 img{ width: 100%;
+               padding-left: 30px;}    
+               
+.caption{align-items: center;
+        display: flex; }               
+
+
+/***3**/
+@media (max-width: 768px){
+    .text-caption{padding-top: 30px;} 
+}
+
+.fruit{ display : block ;
+    text-align : center ; }
+  
+.fruit img{display : inline;}    
+
+
+/***4*/
+@media (min-width:1025px){
+#feature4 .container { width: 70%;}
+}
+
+.light-feature{ background-color:rgb(23, 102, 112)  ;
+    background: url('img/mountain-pc.png') ;      
+    background-repeat: no-repeat;
+    background-position-y: 20%;
+    background-position-x: center;
+    color: white;
+}   
+
+.text-box{ background-color:  rgb(23, 102, 112) ;
+            opacity: 0.9;
+         padding: 2% 5%;
+       }
+
+
+/**footer***/
+footer{background-color: #262f36;}
+footer li {list-style: none; color: #6c6f73;}      
+footer .container{color: whitesmoke;} 
+footer span{color:#718fa9; font-weight: bold;}
