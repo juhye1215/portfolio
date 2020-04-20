@@ -2612,7 +2612,7 @@ input, select, textarea {
 
 
 
-	
+		}
 
 /* Mobile */
 
@@ -2735,7 +2735,7 @@ input, select, textarea {
 
 				.box.style2 .inner .image {
 					padding: 0;
-					max-width: 250px;
+					max-width: 70%;
 					margin: 0 auto 20px auto;
 				}
 
