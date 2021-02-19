@@ -1760,7 +1760,7 @@ input, select, textarea {
 		outline: 0;
 		padding: 1em 3em 1em 3em;
 		text-align: center;
-		border-radius: 0.8em;
+		border-radius: 0.5rem;
 		font-weight: 400;
 	}
 
@@ -2130,7 +2130,7 @@ input, select, textarea {
 /* Banner */
 	.banner-bg{ background: url("images/blue-bg\(800h\).png") center center no-repeat;
 				background-size: cover;
-				height: auto; width: 100%;
+				width: 100%;
 				opacity: 0.9;
 				}
 
@@ -2180,7 +2180,7 @@ input, select, textarea {
 		
 		#banner footer { clear: both;  padding: 10px 0 0 0; z-index: 10;}  /**포트폴리오 보기 버튼*/
 
-		#banner .mypicture img{border-radius: 50%; margin: 2% 0; }
+		#banner .mypicture img{border-radius: 0.5rem; margin: 2% 0; }
 		#banner h2{padding-bottom: 5px;}
 		#banner .mypicture p{width: 90%; margin: 0 auto;}
 
@@ -2188,7 +2188,7 @@ input, select, textarea {
 	
 		#banner .myskills li{float: left; width: 33%;
 			margin: 0; padding: 0; list-style: none; }
-		#banner .myskills li img:hover {transform: scale(1.1,1.1);}	
+	
 		
 		#banner .myskills ul{padding-top: 20px;}
 
