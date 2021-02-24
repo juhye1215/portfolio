@@ -1717,7 +1717,7 @@ input, select, textarea {
 
 		table tbody tr {
 			border-top: solid 1px #eae9e9;
-		}
+				}
 
 			table tbody tr:first-child {
 				border-top: 0;
@@ -1763,7 +1763,7 @@ input, select, textarea {
 		border-radius: 0.5rem;
 		font-weight: 400;
 	}
-
+/*
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
@@ -1771,8 +1771,10 @@ input, select, textarea {
 		.button:hover {
 			background:transparent; 
 			border: 1px solid #2f3542;
-			color: #2f3542 /**이메일 보내기 버튼 후버 #A5DBC8**/
+			color: #2f3542 /**이메일 보내기 버튼 후버 #A5DBC8
 		}
+		**/
+		
 
 		input[type="button"].style2,
 		input[type="submit"].style2,
@@ -1904,14 +1906,26 @@ input, select, textarea {
 
 .box.style1 .inner { 
 	margin: 0 auto !important;
-	padding: 1em 2em 1em 2em !important;
+	padding: 1rem 1rem 0.5rem 1rem !important;
 	}
+	.box.style1 .inner .row:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		width: calc(100% - 40px);
+		border-bottom: solid 1px #fff;
+	}
+
 
 .box.style1 .inner h5{color: blue;}
 
 
 /*****gallery********/
-
+.container-fluid{
+	padding: 0 10%;
+}
 		.box.style2 { 
 			text-align: center;
 		}
@@ -2226,11 +2240,11 @@ input, select, textarea {
   }
   
   .overlay:hover{
-	opacity: 0.9;
+	opacity:1.0;
   }
   
   .plus {
-	color: white;
+	color: #fff;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -2243,14 +2257,16 @@ input, select, textarea {
 
 
 /*코드보기 버튼*/
+
 .overlay footer a {
-	padding: 0 10%;
+	padding: 2.5% 10%;
 	background-color: transparent;
 	border: 1px solid #f6ffc1; 
 	color: #f6ffc1;
 	text-shadow: 0 0 0.5px rgba(53, 184, 130, 0.25);
 	border-radius: 0.2em;
 	font-weight: 500;
+	display: inline-block;
 	}
 
 .overlay footer a:hover{ 
@@ -2509,7 +2525,7 @@ input, select, textarea {
 			border-radius: 0.2em;
 			font-weight: 500;
 			}
-		#mobile-btn{padding:0 10%;}	
+		#mobile-btn{padding:0 5%;}	
 	
 	.portfolio .inner h2{font-size: 18px;}		
 	.portfolio .inner h5{font-size: 15px; }	
