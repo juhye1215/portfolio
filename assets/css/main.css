@@ -1,11 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 @import url("fontawesome-all.min.css");
 
-/*
-	Overflow by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -1833,27 +1829,29 @@ input, select, textarea {
 			border-left: solid 1px #fff;
 		}
 
-		.work3:after{border-left:none;}
+
+.work3:after{border-left:none;}
 
 
-				/**	background: url("images/arrow3.svg") no-repeat;  삼각형 화살표**
+/*
+				background: url("images/arrow3.svg") no-repeat;  삼각형 화살표**/
+
 		.box:before {
 			content: '';
 			display: block;
-			width: 90px;
+			width: 100px;
 			height: 66px;
 			position: absolute;
 			left: 50%;
 			top: -4.5em;
-			margin-left: -45px;
+			margin-left: -50px;
 			margin-top: -33px;
-
-		}*/
+		}
 
 		.box :last-child {
 			margin-bottom: 0;
 		}
-
+	
 		.mywork{clear: both;
 				padding: 0 10%;
 			}	
@@ -1862,7 +1860,7 @@ input, select, textarea {
 			background: #fff;
 			text-align: center;
 			float: left; width: 30%;
-			z-index: 2 ;
+			z-index: 99 ;
 		}
 
 			.box.style1 .image {
@@ -1908,18 +1906,31 @@ input, select, textarea {
 	margin: 0 auto !important;
 	padding: 1rem 1rem 0.5rem 1rem !important;
 	}
-	.box.style1 .inner .row:before {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 50%;
-		left: 20px;
-		width: calc(100% - 40px);
-		border-bottom: solid 1px #fff;
+
+.mywork .gtr-0 {
+	position: relative;
+}
+.mywork article:before {
+	content: '';
+    display: block;
+    position: absolute;
+    top: 45%;
+    right: 0;
+	width: 80%;
+    border-bottom: 1px solid #fff;
+	z-index: -99;
 	}
+.mywork  article :before{
+   display: none;
+   }
+.mywork .work3:before{
+	border: none;
+}
+.mywork .work6:before{
+	border: none;
+}
 
-
-.box.style1 .inner h5{color: blue;}
+.box.style1 .inner h5{color: darkblue;}
 
 
 /*****gallery********/
@@ -1970,7 +1981,7 @@ input, select, textarea {
 						left: 20px;
 						width: calc(100% - 40px);
 						border-bottom: solid 1px #fff;
-					}
+						}
 
 				.box.style2 .inner .image {
 					position: relative;
