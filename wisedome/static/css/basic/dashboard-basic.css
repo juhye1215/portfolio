@@ -7027,7 +7027,6 @@ input[type="button"].btn-block {
 }
 
 @media (max-width: 575.98px) {
- 
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid,
   .navbar-expand-sm > .container-sm,
@@ -14081,12 +14080,14 @@ code {
 /* Footer */
 .footer {
   background: #f2edf3 !important;
-  border-top: 1px solid #e7dee9;
+  border-top: 1px solid #e7dee9 !important;
   padding: 20px 1rem;
+  /**
   transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
+  **/
   font-size: calc(0.875rem - 0.05rem);
   font-family: "SCDream2";
 }
@@ -17635,24 +17636,32 @@ dl li {
 .navbar {
   font-family: "SCDream3";
   background: #fff;
+  /**
   transition: background 0.25s ease;
   -webkit-transition: background 0.25s ease;
   -moz-transition: background 0.25s ease;
   -ms-transition: background 0.25s ease;
+  **/
 }
 .navbar .navbar-brand {
   width: 110px;
 }
 .navbar .navbar-brand-wrapper {
+  /**
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
   -ms-transition: width 0.25s ease, background 0.25s ease;
+  ***/
   background: #323641;
   width: 250px;
   height: 70px;
 }
 @media (max-width: 991px) {
+  .navbar {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
   .navbar .navbar-brand-wrapper {
     width: 55px;
   }
@@ -17687,10 +17696,12 @@ dl li {
   margin: auto;
 }
 .navbar .navbar-menu-wrapper {
+  /**
   transition: width 0.25s ease;
   -webkit-transition: width 0.25s ease;
   -moz-transition: width 0.25s ease;
   -ms-transition: width 0.25s ease;
+  **/
   color: #9c9fa6;
   padding-left: 24px;
   padding-right: 24px;
@@ -17702,7 +17713,6 @@ dl li {
     width: auto;
     padding-left: 15px;
     padding-right: 15px;
-    
   }
 }
 .navbar .navbar-menu-wrapper .navbar-toggler {
@@ -18857,8 +18867,10 @@ dl li {
 }
 
 .main-panel {
+  /**
   -webkit-transition: width 0.25s ease, margin 0.25s ease;
   transition: width 0.25s ease, margin 0.25s ease;
+  **/
   width: calc(100% - 250px);
   min-height: calc(100vh - 70px);
   display: -webkit-box;
