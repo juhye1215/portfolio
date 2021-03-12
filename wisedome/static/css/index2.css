@@ -97,9 +97,39 @@ a {
   height: 4px;
   margin: 0 auto;
 }
-
+#card-icon2 {
+  fill: #79dd70;
+  cursor: pointer;
+}
+#voice-icon .icon-active {
+  fill: #11cf00;
+  color: #11cf00;
+}
+#card-icon3 {
+  fill: #5f94f8;
+  cursor: pointer;
+}
+#img-icon .icon-active {
+  fill: #034ed8;
+  color: #034ed8;
+}
+#card-icon4 {
+  fill: #b66382;
+  cursor: pointer;
+}
+#text-icon .icon-active {
+  fill: #70012b;
+  color: #70012b;
+}
+#card-icon5 {
+  fill: #b679f7;
+  cursor: pointer;
+}
+#video-icon .icon-active {
+  fill: #7801f7;
+  color: #7801f7;
+}
 svg {
-  fill: #315057;
   width: 65%;
 }
 .modal-content img {
@@ -107,17 +137,6 @@ svg {
 }
 .icon-title {
   color: #343a40;
-}
-
-.card-body:hover svg,
-.card-body:hover p {
-  cursor: pointer;
-  fill: #b66dff;
-  color: #b66dff;
-}
-.icon-active {
-  fill: #b66dff;
-  color: #b66dff;
 }
 
 .card-col .card-body {
