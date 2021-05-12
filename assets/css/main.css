@@ -2157,12 +2157,10 @@ button.style3:hover,
 .confetti-video {
   display: block;
 }
-
-/**
 .confetti-mobile {
   display: none;
 }
-**/
+
 #header {
   -moz-transition: opacity 2s ease-in-out;
   -webkit-transition: opacity 2s ease-in-out;
@@ -2813,7 +2811,7 @@ body.is-preload #header footer {
     .web {
       display: none;
     }
-    /*
+
     .confetti-video {
       display: none;
     }
