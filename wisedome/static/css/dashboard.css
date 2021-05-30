@@ -167,3 +167,50 @@ svg {
   background: transparent;
   text-decoration: none;
 }
+.badge-ios-group .badge {
+  display: inline-block;
+  border: 1px solid #888888;
+  color: #888888;
+  /* border: 1px solid #198ae3;*/
+  padding: 0.25rem;
+  margin: 0.25rem 0.01rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  /* color: #198ae3;*/
+  background: transparent;
+  text-decoration: none;
+}
+#premium-icon .icon-active,
+#premium-icon :hover svg,
+#premium-icon :hover h6 {
+  fill: #e29300;
+  color: #e29300;
+}
+#voice-icon .icon-active,
+#voice-icon:hover svg,
+#voice-icon:hover h6 {
+  fill: #11cf00;
+  color: #11cf00;
+}
+
+#img-icon .icon-active,
+#img-icon:hover svg,
+#img-icon:hover h6 {
+  fill: #034ed8;
+  color: #034ed8;
+}
+
+#text-icon .icon-active,
+#text-icon:hover svg,
+#text-icon :hover h6 {
+  fill: #70012b;
+  color: #70012b;
+}
+
+#video-icon .icon-active,
+#video-icon:hover svg,
+#video-icon:hover h6 {
+  fill: #7801f7;
+  color: #7801f7;
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>이미지 업로드하기</title>
+    <title>비디오작업</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../static/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../static/css/function/vendor.bundle.base.css">
@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="../../static/css/basic/guideline.css">
     <link rel="stylesheet" href="../../static/css/function/darkmode.css">
     <!---현재 페이지에만 들어가는 css-->
-    <link rel="stylesheet" href="../../static/css/workspace-img.css">
+    <link rel="stylesheet" href="../../static/css/video.css">
+    <link rel="stylesheet" href="../../static/css/afterlongin-navfooter.css">
+    <link rel="stylesheet" href="../../static/css/function/owl.carousel.min.css">
  
   </head>
   <body>
@@ -24,7 +26,7 @@
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" >
-            <span class="mdi mdi-format-horizontal-align-left " onclick="intend(this)"></span><!--아이콘버튼 사이드바 펼침 및 닫기 아이콘-->
+            <span class="mdi mdi-format-horizontal-align-left " onclick="intend(this)"></span>
           </button>
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item nav-profile dropdown">
@@ -39,10 +41,10 @@
               </a>
               <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
                 <a class="dropdown-item " href="../workspace/myProfile.html">
-                  <i class="mdi mdi mdi-account-circle mr-2 text-success"></i>  My Profile </a>
+                  <i class="mdi mdi mdi-account-circle mr-2 text-success"></i> My Profile </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">
-                  <i class="mdi mdi-logout mr-2 text-primary"></i>  Log Out</a>
+                  <i class="mdi mdi-logout mr-2 text-primary"></i>Log Out </a>
               </div>
             </li>
             <li class="nav-item d-none d-lg-block full-screen-link">
@@ -50,7 +52,7 @@
                 <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
               </a>
             </li>
-                
+    
             <li class="nav-item">
               <div class="nav-link">
                 <div class="custom-control custom-switch">
@@ -129,104 +131,104 @@
 
     <div class="page-header">
       <h3 class="page-title">
-        <span class="page-title-icon bg-gradient-primary text-white"><i class="mdi mdi-tooltip-image"></i></span>  &nbsp;
-       Upload Images
+        <span class="page-title-icon bg-gradient-primary text-white mr-2"><i class="mdi mdi-youtube"></i></span>
+        비디오 시청하기
       </h3>
     </div>
 
-
-<!------문제 들어가는 영역-------->
+    
 <div class="row">
   <div class="col-md-12 grid-margin">
+    
     <div class="card bg-white ">
       <div class="card-body "> 
-        <h4 class="card-title"><i class="mdi mdi-label"></i>  &nbsp; Upload your images here</h4>
-            <div class="row mt-4 ">
-              <div class="col-xl-9 col-lg-8 ">  
-               
-	      	<!---이미지 드래그 하는영역--->
-    <form action="#" method="POST" enctype="multipart/form-data">
-      <div class="upload-container">
-
-            <div class="form-group">
-              <div class="preview-zone hidden">
-                <div class="box box-solid">
-                  <div class="box-header with-border ">
-
-                    <div class="box-tools text-right mb-2">
-                      <button class="btn btn-secondary btn-icon"><i class="mdi mdi-delete-forever" ></i></button>
-                    </div>
-                  </div>
-                  <div class="box-body"></div>
-                </div>
-              </div>
-              <div class="dropzone-wrapper">
-                <div class="dropzone-desc">
-                  <i class="mdi mdi-briefcase-upload" ></i><br><br>
-                  <p>Please drag jpg file or update here</p>
-                </div>
-                <input type="file" name="img_logo" class="dropzone" id='fileInput' accept="image/jpeg, image/jpg, image/png" onsubmit="fileUpload()" >
-      
-                 <!---제출하기 버튼누를떄 뜨는 alert 문구-->
-                <div class="alert alert-warning alert-dismissible fade" role="alert" id="failAlert">
-                  <strong>앗!</strong> 이미지를 먼저 업데이트 해주세요
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div> 
-                <div class="alert alert-success alert-dismissible fade" role="alert" id="successAlert">
-                  <strong>Upload Sucessful!</strong> 포인트는 이미지 검수후에 지급되며, 최대 일주일정도 걸릴수도 있습니다
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div> 
-
-              </div>
-            </div>
+        <h4 class="card-title"><i class="mdi mdi-label mr-2"></i> 다음의 영상을 보고 대표이미지로 적절한 이미지를 선택해주세요</h4>
+         <div class="row justify-content-end upper-submit">
+           <div class="col-sm-6 col-12 text-right">
+             <button type="radio" type="submit"  class="btn btn-danger" id="submit" disabled><i class="mdi mdi-arrow-up-bold-circle-outline mr-1"></i> 제출하기</button>
+           </div>
          </div>
-       </form>
+            <div class="row">
+             <div class="col-md-12 mx-auto">
+              <div class="modal" id="video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="video">
+                  <div class="modal-content">
+                    <div class="modal-body mb-0 p-0">
+                     <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1" allowfullscreen></iframe>
+                     </div>
+                   </div>
+              <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+              </div>
+           </div>
+        </div>
      </div>
-  
-     <div class="col-xl-3 col-lg-4 answers">   
-        <p class="card-description pb-3">Only jpg and png file</p>
-         <button type="submit" class="btn btn-success" id="file-submit" ><i class="mdi mdi-cloud-upload"></i>Submit </button>
-         <button class="btn" id="disable-submit"><i class="mdi mdi mdi-comment-alert-outline"></i>Not Applicable</button>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
 
- <!---작업불가사유 적는 칸 뜨는곳-->
-    <div class="col-md-12 grid-margin" id="disable-reason">
-      <div class="card bg-white">
-        <div class="card-body">
-          <h4 class="card-title"><i class="mdi mdi-message-text"></i> &nbsp; 작업불가 사유</h4>
-           <div class="row">
-            <div class="col-xl-9 col-lg-8 d-inline-flex">
-               <!---사유 입력란-->
-              <textarea id="input_text" class="text-typing" rows="1"></textarea>
-            </div>  
-            <div class="col-xl-3 col-lg-4 answers"> 
-            <button type="submit" class="btn btn-danger " id="disable-reason-btn" disabled ><i class="mdi mdi-cloud-upload"></i>사유제출하기</button>
+     <div class="col-md-6 text-center mx-auto p-0">
+      <a> <i class="mdi mdi-play-circle-outline text-secondary z-depth-1"  data-toggle="modal" data-target="#video"></i></a>
+    </div>
+   </div>        
+  </div> 
+ </div>
+
+<!--비디오 클립 선택하기-->
+<div class="row owl-group">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card bg-white">
+      <div class="card-body">
+        <div class="owl-carousel owl-theme full-width">
+
+          <div class="item" >
+            <div class="card text-white" id="radio1"  >
+              <input type="radio" name="item" >
+                <img class="card-img" src="../../static/images/videoCllip-1.PNG" alt="Card image" >
+            </div>
           </div>
+          <div class="item">
+            <div class="card text-white" id="radio2" >
+              <input type="radio" name="item">
+                <img class="card-img" src="../../static/images/videoCllip-2.JPG" alt="Card image">
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-white" id="radio3" >
+              <input type="radio" name="item">
+                 <img class="card-img" src="../../static/images/videoCllip-3.JPG" alt="Card image">
+            </div>
+          </div>
+          <div class="item">
+            <div class="card text-white" id="radio4">
+              <input type="radio"  name="item">
+                <img class="card-img" src="../../static/images/videoCllip-4.JPG" alt="Card image">
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
+</div>
 
+<div class="row justify-content-center bottom-submit">
+  <div class="col-12 text-center">
+    <button type="radio" type="submit"  class="btn btn-danger" id="submit" disabled><i class="mdi mdi-arrow-up-bold-circle-outline mr-1"></i> 제출하기</button>
+  </div>
+</div>
 
+  </div>
+</div>
 
-<!--가이드 라인 영역-->
+<!--가이드 라인 영역 -->
 <div class="col-md-12">
   <div class="card bg-white">
     <div class="card-body">
      
-      <div id="accordion-1" class="accordion ">
+      <div id="accordion-1" class="accordion">
         <div class="card">
           <div class="card-header " id="headingOne">
             <h5 class="mb-0">
-              <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <h6> <i class="mdi mdi-cards-playing-outline"></i>   이용방법</h6></a>
+              <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> <h6> <i class="mdi mdi-cards-playing-outline"></i>   이용방법</h6></a>
             </h5>
           </div>
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-1">
@@ -247,42 +249,81 @@
           </div>
         </div>
          
-
         </div>
       </div>
-    </div><!--가이드라인-->
-    
+    </div>
+</div>
 
-</div>
-</div>
+
+</div><!-- partial -->
 </div><!-- main-panel ends -->
 
 
-   
-<!------------------------------------------- FOOTER -------------------------------->
+<!-- FOOTER-->
 <footer class="footer bg-white">
-   <div class="d-flex justify-content-center">
-     <span class="text-muted">Copyright © 2020 <a href="#" target="_blank">Data.ly</a>. All rights reserved.</span>
-       </div>
-        </footer>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4">
+        <img class="img-fluid" src="../../static/images/wisedome-logo.png" alt="logo">
+         <div class="d-flex mt-3">
+          <h6 class="font-weight-normal"> 대표이사 : 차정원</h6>
+        </div>
+        <div class="d-flex">
+          <h6 class="font-weight-normal">사업자등록번호 : 458-42-00460</h6>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <ul class="nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="../aboutus.html"> 회사소개</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="d-flex">
+          <i class="mdi mdi-cellphone-android"></i>
+          <h6 class="font-weight-normal">&nbsp;  (055)-213-5472</h6>
+        </div>
+        <div class="d-flex">
+          <i class="mdi mdi-email"></i>
+          <h6 class="font-weight-normal"> &nbsp; wisedomekr@gmail.com</h6>
+        </div>
+
+        <div class="d-flex">
+          <i class="mdi mdi-home-map-marker"></i>
+          <h6 class="font-weight-normal"> &nbsp;경상남도 창원시 의창구 창원대학로 20, 85호관 506-1호 (사림동, 창원대학교)</h6>
+        </div>
+      </div>
 
     </div>
-    <!-- container-scroller -->
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-center">
+      <p class="text-small">Copyright © 2021 Wisedome All rights reserved.</p>
+    </div>      
+  </div>
+</footer>
 
 
 
 
-    <!-- plugins:js 기본 필수로 들어가는 JS파일-->
-    <script src="../../static/js/plugin/vendor.bundle.base.js"></script>
-    <script src="../../static/js/plugin/off-canvas.js"></script>
-    <script src="../../static/js/plugin/hoverable-collapse.js"></script>
-    <script src="../../static/js/plugin/misc.js"></script>
-    <script src="../../static/js/darkmode.js"></script>
+</div><!-- page-body-wrapper ends -->
 
-    <!-- 이 페이지에서만 필요한 js -->
-    <script src="../../static/js/workspace-img.js"></script>
-    <script src="../../static/js/img-upload.js"></script>
+<!-- plugins:js 기본 필수로 들어가는 JS파일-->
+<script src="../../static/js/plugin/vendor.bundle.base.js"></script>
+<script src="../../static/js/plugin/off-canvas.js"></script>
+<script src="../../static/js/plugin/hoverable-collapse.js"></script>
+<script src="../../static/js/plugin/misc.js"></script>
+<script src="../../static/js/darkmode.js"></script>
 
+<!-- 이 페이지에서만 필요한 js -->
+<script src="../../static/js/plugin/owl.carousel.min.js"></script>
+<script src="../../static/js/plugin/owl.carousel.js"></script>
+ <script src="../../static/js/video.js"></script>
   
-  </body>
+</body>
 </html>
