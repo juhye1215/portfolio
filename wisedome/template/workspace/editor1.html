@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>질문하기</title>
+    <title>Post a Question</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../static/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../static/css/function/vendor.bundle.base.css">
@@ -21,12 +21,12 @@
     <div class="container-scroller">
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="./dashboard-basic.html"><img src="../../static/images/wisedome-logo-white.png" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="./dashboard-basic.html"><img src="../../static/images/wisedome-logo.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo" href="./dashboard.html"><img src="../../static/images/wisedome-logo-white.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="./dashboard.html"><img src="../../static/images/wisedome-logo.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" >
-            <span class="mdi mdi-format-horizontal-align-left " onclick="intend(this)"></span><!--아이콘버튼 사이드바 펼침 및 닫기 아이콘-->
+            <span class="mdi mdi-format-horizontal-align-left " onclick="intend(this)"></span>
           </button>
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item nav-profile dropdown">
@@ -36,15 +36,15 @@
                   <span class="availability-status online"></span>
                 </div>
                 <div class="nav-profile-text">
-                  <p class="mb-1">창원대</p>
+                  <p class="mb-1">Chris</p>
                 </div>
               </a>
               <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
                 <a class="dropdown-item " href="../workspace/myProfile.html">
-                  <i class="mdi mdi mdi-account-circle mr-2 text-success"></i>  마이페이지 </a>
+                  <i class="mdi mdi mdi-account-circle mr-2 text-success"></i> My Profile </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">
-                  <i class="mdi mdi-logout mr-2 text-primary"></i>  로그아웃 </a>
+                  <i class="mdi mdi-logout mr-2 text-primary"></i>Log Out </a>
               </div>
             </li>
             <li class="nav-item d-none d-lg-block full-screen-link">
@@ -52,7 +52,7 @@
                 <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
               </a>
             </li>
-                 <!--기존에 있던, 메일함 알림 아이콘 삭제, 및 검색기능 삭제-->
+    
             <li class="nav-item">
               <div class="nav-link">
                 <div class="custom-control custom-switch">
@@ -76,60 +76,60 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav ">
             <li class="nav-item nav-profile">
-              <a href="#" class="nav-link">
+              <a href="../workspace/myProfile.html" class="nav-link">
                 <div class="nav-profile-image">
                   <img src="../../static/images/face5.jpg" alt="profile">
                   <span class="login-status online"></span>
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
-                  <span class="font-weight-bold mb-2">창원대</span>
-                  <span class="text-secondary text-small">초급자</span>
+                  <span class="font-weight-bold mb-2">Chris</span>
+                  <span class="text-secondary text-small">Beginner</span>
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./dashboard.html">
-                <span class="menu-title ">홈</span>
+                <span class="menu-title ">HOME</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"  href="./projectList.html"><!--프로젝트 리스트 보기 링크 걸어놓음-->
-                <span class="menu-title">프로젝트</span>
+              <a class="nav-link"  href="./projectList.html">
+                <span class="menu-title">PRJECT</span>
                 <i class="mdi mdi-apps menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./point.html"><!--포인트 전환 링크 걸어놓음-->
-                <span class="menu-title">포인트</span>
+              <a class="nav-link" href="./point.html">
+                <span class="menu-title">POINT</span>
                 <i class="mdi mdi-trophy-variant menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./qnaBoard1.html"><!--질문게시판 링크 걸어놓음-->
-                <span class="menu-title">질문게시판</span>
+              <a class="nav-link" href="./qnaBoard1.html">
+                <span class="menu-title">Q&A</span>
                 <i class="mdi mdi-human-greeting menu-icon"></i>
               </a>
             </li>
 
             <li class="nav-item sidebar-actions">
-              <a class="nav-link" href="./point.html"><!--포인트 전환 링크 걸어놓음-->
+              <a class="nav-link" href="./point.html">
                 <div class="border-bottom"></div>
                 <button class="btn btn-block btn-lg btn-gradient-primary mt-4 reward-btn">
-                  <i class="mdi mdi-cash-multiple"></i> 포인트 전환</button>
+                  <i class="mdi mdi-cash-multiple"></i> My Point</button>
                   <br>
                 <div class="border-bottom"></div>
               </a>
             </li>
           </ul>
-        </nav><!--여기까지가 기본 nav-->
+        </nav>
 
                
 <div class="main-panel">
     <div class="content-wrapper">
       <div class="page-header">
-        <h3 class="page-title"> 질문하기 </h3>
+        <h3 class="page-title"> Post a Question about Membership </h3>
       </div>
 
 
@@ -143,22 +143,22 @@
                 <div class="col-sm-12 mx-auto">
 
                   <!--질문주제-->
-                  <div class=" tab-content-custom-pill " >
-                    <ul class="nav nav-pills nav-pills-custom justify-content-center">
+                  <div class="tab-content tab-content-custom-pill " >
+                    <ul class="nav nav-pills nav-pills-custom justify-content-center pb-3">
                       <li class="nav-item">
-                        <a class="nav-link active" href="./qnaBoard1.html" > <i class="mdi mdi-wallet-membership"></i><br>회원가입 </a>  
+                        <a class="nav-link active" href="./qnaBoard1.html" > <i class="mdi mdi-wallet-membership"></i><br>Membership</a>  
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./qnaBoard2.html" > <i class="mdi mdi-ticket"></i><br> 포인트 </a>
+                        <a class="nav-link" href="./qnaBoard2.html" > <i class="mdi mdi-ticket"></i><br> Point</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link " href="./qnaBoard3.html" ><i class="mdi mdi-television-guide"></i><br> 프로젝트 </a>
+                        <a class="nav-link" href="./qnaBoard3.html" ><i class="mdi mdi-television-guide"></i><br> Project</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./qnaBoard4.html" > <i class="mdi mdi-wallet-giftcard"></i><br> 환급</a>
+                        <a class="nav-link" href="./qnaBoard4.html" > <i class="mdi mdi-wallet-giftcard"></i><br>Reward</a>
                       </li>
                     </ul>
-                  </div>
+                    </div>
 
                     <div class="show active">
                       <div class="row grid-margin">
@@ -167,29 +167,29 @@
                             <div class="card-body">
 
                             <form id="myQuestion">
-                              <div class="card-title">질문제목</div>
+                              <div class="card-title">Title</div>
                               <div class="form-group row">
                                 <div class="col-sm-3">
                                   <select class="form-control" id="subtitle">
-                                    <option selected>주제</option>
-                                    <option value="1">가입</option>
-                                    <option value="2">탈퇴</option>
-                                    <option value="3">본인인증</option>
-                                    <option value="4">기타</option>
+                                    <option selected>Select</option>
+                                    <option value="1">Membership</option>
+                                    <option value="2">Cancelation</option>
+                                    <option value="3">Password</option>
+                                    <option value="4">Others</option>
                                    </select>
                                   </div>
                                   <div class="col-sm-9 ">
-                                    <input type="text" class="form-control input-title" id="myTitle" placeholder="제목을 입력하세요">
+                                    <input type="text" class="form-control input-title" id="myTitle" placeholder="Title">
                                   </div>
                                 </div>
                               </form>
-                              <div class="card-title">질문내용</div>
+                              <div class="card-title">Summary</div>
                                 <div id="summernote"></div><!--editor template-->
                              </div><!--card body-->
 
                               <div class="btn-group editor-btn-group">
-                               <a class="btn btn-gradient-secondary" id="myCancel">취소</a> 
-                               <a class="btn btn-gradient-primary" href="./commentConfirm.html" >확인</a>   
+                               <a class="btn btn-gradient-secondary" id="myCancel">Cancel</a> 
+                               <a class="btn btn-gradient-primary" >Submit</a>   
                               </div> 
                             </div>
                           </div>

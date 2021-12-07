@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Spelling Tag</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../static/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../static/css/function/vendor.bundle.base.css">
+    <!--기본 css--->
+    <link rel="stylesheet" href="../../static/css/basic/dashboard-basic.css">
+    <link rel="stylesheet" href="../../static/css/basic/guideline.css">
+    <link rel="stylesheet" href="../../static/css/function/darkmode.css">
+    <!---현재 페이지에만 들어가는 css-->
+    <link rel="stylesheet" href="../../static/css/nia_typo_test.css">
+
+
+</head>
+
+<body>
+    <div class="container-scroller">
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+          <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo" href="./dashboard.html"><img src="../../static/images/wisedome-logo-white.png" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href="./dashboard.html"><img src="../../static/images/wisedome-logo.png" alt="logo" /></a>
+          </div>
+          <div class="navbar-menu-wrapper d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" >
+              <span class="mdi mdi-format-horizontal-align-left " onclick="intend(this)"></span>
+            </button>
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item nav-profile dropdown">
+                <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                  <div class="nav-profile-img">
+                    <img src="../../static/images/face5.jpg" alt="image">
+                    <span class="availability-status online"></span>
+                  </div>
+                  <div class="nav-profile-text">
+                    <p class="mb-1">Chris</p>
+                  </div>
+                </a>
+                <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                  <a class="dropdown-item " href="../workspace/myProfile.html">
+                    <i class="mdi mdi mdi-account-circle mr-2 text-success"></i> My Profile </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="mdi mdi-logout mr-2 text-primary"></i>Log Out </a>
+                </div>
+              </li>
+              <li class="nav-item d-none d-lg-block full-screen-link">
+                <a class="nav-link">
+                  <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+                </a>
+              </li>
+      
+              <li class="nav-item">
+                <div class="nav-link">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                    <label class="custom-control-label" for="darkSwitch"></label> 
+                  </div>
+                </div>
+              </li>
+            </ul>
+  
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-menu"></span>
+            </button>
+          </div>
+        </nav>
+  
+        
+   <!--왼쪽 사이드바 -->
+        <div class="container-fluid page-body-wrapper">
+  
+          <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav ">
+              <li class="nav-item nav-profile">
+                <a href="../workspace/myProfile.html" class="nav-link">
+                  <div class="nav-profile-image">
+                    <img src="../../static/images/face5.jpg" alt="profile">
+                    <span class="login-status online"></span>
+                  </div>
+                  <div class="nav-profile-text d-flex flex-column">
+                    <span class="font-weight-bold mb-2">Chris</span>
+                    <span class="text-secondary text-small">Beginner</span>
+                  </div>
+                  <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./dashboard.html">
+                  <span class="menu-title ">HOME</span>
+                  <i class="mdi mdi-home menu-icon"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="./projectList.html">
+                  <span class="menu-title">PRJECT</span>
+                  <i class="mdi mdi-apps menu-icon"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./point.html">
+                  <span class="menu-title">POINT</span>
+                  <i class="mdi mdi-trophy-variant menu-icon"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./qnaBoard1.html">
+                  <span class="menu-title">Q&A</span>
+                  <i class="mdi mdi-human-greeting menu-icon"></i>
+                </a>
+              </li>
+  
+              <li class="nav-item sidebar-actions">
+                <a class="nav-link" href="./point.html">
+                  <div class="border-bottom"></div>
+                  <button class="btn btn-block btn-lg btn-gradient-primary mt-4 reward-btn">
+                    <i class="mdi mdi-cash-multiple"></i> My Point</button>
+                    <br>
+                  <div class="border-bottom"></div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+
+            <!-- 메인 작업화면 -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+
+                    <div class="page-header">
+                        <h3 class="page-title">
+                            <span class="page-title-icon bg-gradient-primary text-white"><i
+                                    class="mdi mdi-tooltip-edit"></i></span> &nbsp;
+                           Speclling Update
+                        </h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 grid-margin">
+                            <div class="card bg-white">
+                                <div class="card-body">
+                                    <h4 class="card-title"><i class="mdi mdi-label"></i> &nbsp; Please click a word to update correct spelling and save the changes
+                                    </h4>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-12 main-text">
+                                            <p>
+                                                <!--오타 수정할 단어를 하나씩 span태그로 잡음-->
+                                                <span id="pop1" class="word" data-toggle="popover"
+                                                    data-popover-content="#a1">Black Holes</span>
+                                                <span id="pop2" class="word" data-toggle="popover"
+                                                    data-popover-content="#a2">Potoelectric Effect</span>
+                                                <span id="pop3" class="word" data-toggle="popover"
+                                                    data-popover-content="#a3">Dignissimos</span>
+                                                <span id="pop4" class="word" data-toggle="popover"
+                                                    data-popover-content="#a4">Milk Way </span>
+                                                <span id="pop5" class="word" data-toggle="popover"
+                                                    data-popover-content="#a5">Ccintillation</span>
+                                                <span id="pop6" class="word" data-toggle="popover"
+                                                    data-popover-content="#a6">Greavity</span>
+                                                <span id="pop7" class="word" data-toggle="popover"
+                                                    data-popover-content="#a7">Electromaganetic Radiation </span>
+                                                <span id="pop8" class="word" data-toggle="popover"
+                                                    data-popover-content="#a8">Semiconductors</span>
+                                                <span id="pop9" class="word" data-toggle="popover"
+                                                    data-popover-content="#a9">Auger effect </span>
+                                                <span id="pop10" class="word" data-toggle="popover"
+                                                    data-popover-content="#a10">Fibre Optics Telecommunications </span>
+
+                                            </p>
+
+
+                                            <!--span단어를 클릭했을때 아래에 뜨는 각 각의 popover 들-->
+                                            <div id="a1" class="d-none">
+                                                <div class="popover-body">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" id="input1"
+                                                            aria-describedby="pop-btn">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-sm btn-primary" data-toggle="popover"
+                                                                type="submit" id="answer_edit_btn" onclick="confirm1()">
+                                                               Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="a2" class="d-none">
+                                                    <div class="popover-body">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" id="input2"
+                                                                aria-describedby="pop-btn">
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-sm btn-primary"
+                                                                    data-toggle="popover" type="submit"
+                                                                    id="answer_edit_btn" onclick="confirm2()">
+                                                                   Save</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="a3" class="d-none">
+                                                        <div class="popover-body">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" id="input3"
+                                                                    aria-describedby="pop-btn">
+                                                                <div class="input-group-append">
+                                                                    <button class="btn btn-sm btn-primary"
+                                                                        data-toggle="popover" type="submit"
+                                                                        id="answer_edit_btn" onclick="confirm3()">
+                                                                       Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="a4" class="d-none">
+                                                            <div class="popover-body">
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" id="input4"
+                                                                        aria-describedby="pop-btn">
+                                                                    <div class="input-group-append">
+                                                                        <button class="btn btn-sm btn-primary"
+                                                                            data-toggle="popover" type="submit"
+                                                                            id="answer_edit_btn" onclick="confirm4()">
+                                                                           Save</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="a5" class="d-none">
+                                                                <div class="popover-body">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control"
+                                                                            id="input5" aria-describedby="pop-btn">
+                                                                        <div class="input-group-append">
+                                                                            <button class="btn btn-sm btn-primary"
+                                                                                data-toggle="popover" type="submit"
+                                                                                id="answer_edit_btn"
+                                                                                onclick="confirm5()">Save</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="a6" class="d-none">
+                                                                    <div class="popover-body">
+                                                                        <div class="input-group">
+                                                                            <input type="text" class="form-control"
+                                                                                id="input6" aria-describedby="pop-btn">
+                                                                            <div class="input-group-append">
+                                                                                <button class="btn btn-sm btn-primary"
+                                                                                    data-toggle="popover" type="submit"
+                                                                                    id="answer_edit_btn"
+                                                                                    onclick="confirm6()">Save</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="a7" class="d-none">
+                                                                        <div class="popover-body">
+                                                                            <div class="input-group">
+                                                                                <input type="text" class="form-control"
+                                                                                    id="input7"
+                                                                                    aria-describedby="pop-btn">
+                                                                                <div class="input-group-append">
+                                                                                    <button
+                                                                                        class="btn btn-sm btn-primary"
+                                                                                        data-toggle="popover"
+                                                                                        type="submit"
+                                                                                        id="answer_edit_btn"
+                                                                                        onclick="confirm7()">
+                                                                                       Save</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="a8" class="d-none">
+                                                                            <div class="popover-body">
+                                                                                <div class="input-group">
+                                                                                    <input type="text"
+                                                                                        class="form-control" id="input8"
+                                                                                        aria-describedby="pop-btn">
+                                                                                    <div class="input-group-append">
+                                                                                        <button
+                                                                                            class="btn btn-sm btn-primary"
+                                                                                            data-toggle="popover"
+                                                                                            type="submit"
+                                                                                            id="answer_edit_btn"
+                                                                                            onclick="confirm8()">
+                                                                                           Save</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div id="a9" class="d-none">
+                                                                                <div class="popover-body">
+                                                                                    <div class="input-group">
+                                                                                        <input type="text"
+                                                                                            class="form-control"
+                                                                                            id="input9"
+                                                                                            aria-describedby="pop-btn">
+                                                                                        <div class="input-group-append">
+                                                                                            <button
+                                                                                                class="btn btn-sm btn-primary"
+                                                                                                data-toggle="popover"
+                                                                                                type="submit"
+                                                                                                id="answer_edit_btn"
+                                                                                                onclick="confirm9()">
+                                                                                               Save</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div id="a10" class="d-none">
+                                                                                    <div class="popover-body">
+                                                                                        <div class="input-group">
+                                                                                            <input type="text"
+                                                                                                class="form-control"
+                                                                                                id="input10"
+                                                                                                aria-describedby="pop-btn">
+                                                                                            <div
+                                                                                                class="input-group-append">
+                                                                                                <button
+                                                                                                    class="btn btn-sm btn-primary"
+                                                                                                    data-toggle="popover"
+                                                                                                    type="submit"
+                                                                                                    id="answer_edit_btn"
+                                                                                                    onclick="confirm10()">
+                                                                                                   Save</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button type="radio" class="btn btn-success float-right"><i
+                                                    class="mdi mdi-cube-unfolded"></i> Submit</button>
+                                                    
+                                        </div>
+                   
+                                    </div>
+
+     
+                                </div>
+
+
+
+
+                                <!-- FOOTER -->
+                                <footer class="footer bg-white">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="text-muted">Copyright © 2020 <a href="#"
+                                                target="_blank">Data.ly</a>. All
+                                            rights reserved.</span>
+                                    </div>
+                                </footer>
+                                <!-- partial -->
+                            </div>
+                            <!-- main-panel ends -->
+                        </div>
+                        <!-- page-body-wrapper ends -->
+                    </div>
+                    <!-- container-scroller -->
+
+
+
+
+
+                    <!-- plugins:js 기본 필수로 들어가는 JS파일-->
+                    <script src="../../static/js/plugin/vendor.bundle.base.js"></script>
+                    <script src="../../static/js/plugin/off-canvas.js"></script>
+                    <script src="../../static/js/plugin/hoverable-collapse.js"></script>
+                    <script src="../../static/js/plugin/misc.js"></script>
+
+                    <!-- 이 페이지에서만 필요한 js -->
+                    <script src="../../static/js/nia_typo_test.js"></script>
+                    <!--추가-->
+                    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

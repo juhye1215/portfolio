@@ -1,0 +1,145 @@
+.main-text{
+ background-color: rgb(247, 247, 230);
+  border: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0.5rem;
+}
+.main-text p{
+  font-size: 1rem;
+  line-height: 2rem;
+  font-family:'Courier New', Courier, monospace}
+
+  ::selection{
+    color: #fff;
+    background-color: #b66dff;   
+  }
+
+.flex-wrap button{
+  width: 42.5%;
+  min-width: 70px;
+  padding: 0.875rem 0.25rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+ 
+  
+  /**답변선택 버튼들*/
+.per{
+color: #fff;
+background-color: #6610f2;}
+.per:hover{
+color: #fff;
+background-color: #4900be;}
+
+.fld{
+color: #fff;
+background-color: #58d8a3;}
+.fld:hover{
+color: #fff;
+background-color: #0aca7a;}
+
+.thr{
+color: #fff;
+background-color: #f675da;}
+.thr:hover{
+color: #fff;
+background-color: #fa45d3;}
+
+.afw{
+color: #fff;
+background-color: #fc8d1e;}
+.afw:hover{
+color: #fff;
+background-color: #e47200;}
+
+.org{
+color: #fff;
+background-color: #f84848;}
+.org:hover{
+color: #fff;
+background-color: #d42626;}
+
+.loc{
+color: #fff;
+background-color: #296972;}
+.loc:hover{
+color: #fff;
+background-color: #004e58;}
+
+.cvl{
+color: #fff;
+background-color: #57c7d4;}
+.cvl:hover{
+color: #fff;
+background-color: #00b1c5;}
+
+.dat{
+color: #fff;
+background-color: #198ae3;}
+.dat:hover{
+color: #fff;
+background-color: #0074cc;}
+
+
+.tim{
+color: #fff;
+background-color: #dbcf48;}
+.tim:hover{
+color: #fff;
+background-color: #cebd06;}
+
+.qtt{
+color: #fff;
+background-color: #6a6599ff;}
+.qtt:hover{
+color: #fff;
+background-color: rgb(82, 74, 153);}
+
+.evt{
+color: #fff;
+background-color: #c7864a;}
+.evt:hover{
+color: #fff;
+background-color:#c7701f;}
+
+.anm{
+color: #fff;
+background-color: #25b118;}
+.anm:hover{
+color: #fff;
+background-color:#0e8a03;}
+
+.plt{
+color: #fff;
+background-color: #2b55c9;}
+.plt:hover{
+color: #fff;
+background-color:#0f359e;}
+
+.mat{
+color: #fff;
+background-color: #8a8b79ff;}
+.mat:hover{
+color: #fff;
+background-color:rgb(103, 104, 81);}
+
+.trm{
+color: #fff;
+background-color: #800000ff;}
+.trm:hover{
+color: #fff;
+background-color:rgb(90, 2, 2);}
+
+
+@media all and (max-width:991px){
+
+  .flex-wrap button{
+    width: 30%;
+  }
+   
+}
+@media all and (max-width:575px){
+  .flex-wrap button{
+    width: 45%;
+  }
+}

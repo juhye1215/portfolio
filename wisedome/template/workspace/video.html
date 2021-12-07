@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>비디오작업</title>
+    <title>Video</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../static/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../static/css/function/vendor.bundle.base.css">
@@ -21,8 +21,8 @@
     <div class="container-scroller">
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="./dashboard-basic.html"><img src="../../static/images/wisedome-logo-white.png" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="./dashboard-basic.html"><img src="../../static/images/wisedome-logo.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo" href="./dashboard.html"><img src="../../static/images/wisedome-logo-white.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="./dashboard.html"><img src="../../static/images/wisedome-logo.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" >
@@ -76,7 +76,7 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav ">
             <li class="nav-item nav-profile">
-              <a href="#" class="nav-link">
+              <a href="../workspace/myProfile.html" class="nav-link">
                 <div class="nav-profile-image">
                   <img src="../../static/images/face5.jpg" alt="profile">
                   <span class="login-status online"></span>
@@ -132,7 +132,7 @@
     <div class="page-header">
       <h3 class="page-title">
         <span class="page-title-icon bg-gradient-primary text-white mr-2"><i class="mdi mdi-youtube"></i></span>
-        비디오 시청하기
+        Video
       </h3>
     </div>
 
@@ -142,12 +142,8 @@
     
     <div class="card bg-white ">
       <div class="card-body "> 
-        <h4 class="card-title"><i class="mdi mdi-label mr-2"></i> 다음의 영상을 보고 대표이미지로 적절한 이미지를 선택해주세요</h4>
-         <div class="row justify-content-end upper-submit">
-           <div class="col-sm-6 col-12 text-right">
-             <button type="radio" type="submit"  class="btn btn-danger" id="submit" disabled><i class="mdi mdi-arrow-up-bold-circle-outline mr-1"></i> 제출하기</button>
-           </div>
-         </div>
+        <h4 class="card-title"><i class="mdi mdi-label mr-2"></i> Please select the tumbnail after watch the video</h4>
+ 
             <div class="row">
              <div class="col-md-12 mx-auto">
               <div class="modal" id="video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -166,7 +162,7 @@
      </div>
 
      <div class="col-md-6 text-center mx-auto p-0">
-      <a> <i class="mdi mdi-play-circle-outline text-secondary z-depth-1"  data-toggle="modal" data-target="#video"></i></a>
+      <a> <i class="mdi mdi-play-circle-outline mdi-36px text-primary z-depth-1"  data-toggle="modal" data-target="#video">Video</i> </a>
     </div>
    </div>        
   </div> 
@@ -211,8 +207,8 @@
 </div>
 
 <div class="row justify-content-center bottom-submit">
-  <div class="col-12 text-center">
-    <button type="radio" type="submit"  class="btn btn-danger" id="submit" disabled><i class="mdi mdi-arrow-up-bold-circle-outline mr-1"></i> 제출하기</button>
+  <div class="col-12 text-center mb-5">
+    <button type="radio" type="submit"  class="btn btn-danger" id="submit" disabled><i class="mdi mdi-arrow-up-bold-circle-outline mr-1"></i> Submit</button>
   </div>
 </div>
 
@@ -228,7 +224,7 @@
         <div class="card">
           <div class="card-header " id="headingOne">
             <h5 class="mb-0">
-              <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> <h6> <i class="mdi mdi-cards-playing-outline"></i>   이용방법</h6></a>
+              <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> <h6> <i class="mdi mdi-cards-playing-outline"></i>  Instruction</h6></a>
             </h5>
           </div>
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-1">
@@ -240,7 +236,7 @@
         <div class="card">
           <div class="card-header" id="headingTwo">
             <h5 class="mb-0">
-              <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">   <h6> <i class="mdi mdi-assistant"></i>   예시보기</h6> </a>
+              <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">   <h6> <i class="mdi mdi-assistant"></i>   Examples</h6> </a>
             </h5>
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-1">
@@ -260,54 +256,11 @@
 
 
 <!-- FOOTER-->
-<footer class="footer bg-white">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-lg-4">
-        <img class="img-fluid" src="../../static/images/wisedome-logo.png" alt="logo">
-         <div class="d-flex mt-3">
-          <h6 class="font-weight-normal"> 대표이사 : 차정원</h6>
-        </div>
-        <div class="d-flex">
-          <h6 class="font-weight-normal">사업자등록번호 : 458-42-00460</h6>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <ul class="nav">
-          <li class="nav-item ">
-            <a class="nav-link" href="../aboutus.html"> 회사소개</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="d-flex">
-          <i class="mdi mdi-cellphone-android"></i>
-          <h6 class="font-weight-normal">&nbsp;  (055)-213-5472</h6>
-        </div>
-        <div class="d-flex">
-          <i class="mdi mdi-email"></i>
-          <h6 class="font-weight-normal"> &nbsp; wisedomekr@gmail.com</h6>
-        </div>
-
-        <div class="d-flex">
-          <i class="mdi mdi-home-map-marker"></i>
-          <h6 class="font-weight-normal"> &nbsp;경상남도 창원시 의창구 창원대학로 20, 85호관 506-1호 (사림동, 창원대학교)</h6>
-        </div>
-      </div>
-
+<footer class="footer bg-wh">
+  <div class="d-flex justify-content-center">
+    <span class="text-muted">Copyright © 2020  Data.ly. All rights reserved.</span>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12 text-center">
-      <p class="text-small">Copyright © 2021 Wisedome All rights reserved.</p>
-    </div>      
-  </div>
 </footer>
-
 
 
 

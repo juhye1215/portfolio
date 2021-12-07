@@ -1,36 +1,35 @@
 //폰트 글자 키우기
-function changeFontSize(className, fontSize) {
-  for (let element of document.getElementsByClassName(className))
-    element.style.fontSize =
-      (typeof fontSize === "function" ? fontSize(element) : fontSize) + "px";
+var def_size = 16;
+var cur_base = def_size;
+$('input[type="button"]').click(function () {
+  change_font_size(parseInt($(this).data("csize")));
+});
+function change_font_size(csize) {
+  var $cotent_html = $(".textsize");
+  $cotent_html.each(function () {
+    var cur_size = parseInt($(this).css("font-size"));
+    cur_size = cur_size + csize;
+    console.log(cur_size);
+    $(this).css("font-size", cur_size.toString() + "px");
+  });
 }
 
-window.addEventListener("input", () => {
-  const input = event.target;
-  if (input.classList.contains("controlbar"))
-    changeFontSize(input.dataset.fsTargetClass || "textsize", input.value);
-});
-
-
-
 //나의 답변관리 숨겼다 나타내기
-$(document).ready(function(){
-  $("#manage-answer-btn").click(function(){
+$(document).ready(function () {
+  $("#manage-answer-btn").click(function () {
     $("#manage-answer").slideToggle("slow");
   });
-  $("#manage-answer-btn").click(function(){
+  $("#manage-answer-btn").click(function () {
     $("#manage-answer-top").hide("slow");
   });
 });
 
-
 //수정하기 버튼 누르면, 객관식 답변들 뜸
 $(document).ready(function () {
-	$("#edit").click(function () {
-			$(".reselect").css("display", "block");
-	});
+  $("#edit").click(function () {
+    $(".reselect").css("display", "block");
+  });
 });
-
 
 ///답변을 누르면 제출하기 버튼 활성화됨
 function enableButton() {
@@ -40,8 +39,6 @@ function enableButton() {
 function typeText() {
   document.getElementById("summary").disabled = false;
 }
-
-
 
 ////페이지번호 (탭버튼)누르면 내용 뜨게하기
 function openPage(evt, pageNumber) {
@@ -58,14 +55,10 @@ function openPage(evt, pageNumber) {
   evt.currentTarget.className += " purple";
 }
 
-
-
 ///문장요약란이 글자가 입력되면 제출하기 버튼 활성화
-$(function(){
-  $("#input_text").on('input',function(){
-    if($("#input_text").val()=='')
-    $("#summary").attr("disabled",true);
-    else
-    $("#summary").attr("disabled", false);
+$(function () {
+  $("#input_text").on("input", function () {
+    if ($("#input_text").val() == "") $("#summary").attr("disabled", true);
+    else $("#summary").attr("disabled", false);
   });
-})
+});

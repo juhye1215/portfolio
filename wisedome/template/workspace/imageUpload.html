@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>이미지 업로드하기</title>
+    <title>Upload Images</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../static/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../static/css/function/vendor.bundle.base.css">
@@ -19,12 +19,12 @@
     <div class="container-scroller">
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="./dashboard-basic.html"><img src="../../static/images/wisedome-logo-white.png" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="./dashboard-basic.html"><img src="../../static/images/wisedome-logo.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo" href="./dashboard.html"><img src="../../static/images/wisedome-logo-white.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="./dashboard.html"><img src="../../static/images/wisedome-logo.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" >
-            <span class="mdi mdi-format-horizontal-align-left " onclick="intend(this)"></span><!--아이콘버튼 사이드바 펼침 및 닫기 아이콘-->
+            <span class="mdi mdi-format-horizontal-align-left " onclick="intend(this)"></span>
           </button>
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item nav-profile dropdown">
@@ -39,10 +39,10 @@
               </a>
               <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
                 <a class="dropdown-item " href="../workspace/myProfile.html">
-                  <i class="mdi mdi mdi-account-circle mr-2 text-success"></i>  My Profile </a>
+                  <i class="mdi mdi mdi-account-circle mr-2 text-success"></i> My Profile </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">
-                  <i class="mdi mdi-logout mr-2 text-primary"></i>  Log Out</a>
+                  <i class="mdi mdi-logout mr-2 text-primary"></i>Log Out </a>
               </div>
             </li>
             <li class="nav-item d-none d-lg-block full-screen-link">
@@ -50,7 +50,7 @@
                 <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
               </a>
             </li>
-                
+    
             <li class="nav-item">
               <div class="nav-link">
                 <div class="custom-control custom-switch">
@@ -74,7 +74,7 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav ">
             <li class="nav-item nav-profile">
-              <a href="#" class="nav-link">
+              <a href="../workspace/myProfile.html" class="nav-link">
                 <div class="nav-profile-image">
                   <img src="../../static/images/face5.jpg" alt="profile">
                   <span class="login-status online"></span>
@@ -122,7 +122,6 @@
             </li>
           </ul>
         </nav>
-
   <!-- 메인 작업화면 -->
  <div class="main-panel ">
    <div class="content-wrapper image-area">
@@ -169,13 +168,13 @@
       
                  <!---제출하기 버튼누를떄 뜨는 alert 문구-->
                 <div class="alert alert-warning alert-dismissible fade" role="alert" id="failAlert">
-                  <strong>앗!</strong> 이미지를 먼저 업데이트 해주세요
+                  <strong>Oh no!</strong>Please attach the file first.
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div> 
                 <div class="alert alert-success alert-dismissible fade" role="alert" id="successAlert">
-                  <strong>Upload Sucessful!</strong> 포인트는 이미지 검수후에 지급되며, 최대 일주일정도 걸릴수도 있습니다
+                  <strong>Upload Sucessful!</strong> Thank you!
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -201,14 +200,14 @@
     <div class="col-md-12 grid-margin" id="disable-reason">
       <div class="card bg-white">
         <div class="card-body">
-          <h4 class="card-title"><i class="mdi mdi-message-text"></i> &nbsp; 작업불가 사유</h4>
+          <h4 class="card-title"><i class="mdi mdi-message-text"></i> &nbsp; Image Submition Reject</h4>
            <div class="row">
             <div class="col-xl-9 col-lg-8 d-inline-flex">
                <!---사유 입력란-->
               <textarea id="input_text" class="text-typing" rows="1"></textarea>
             </div>  
             <div class="col-xl-3 col-lg-4 answers"> 
-            <button type="submit" class="btn btn-danger " id="disable-reason-btn" disabled ><i class="mdi mdi-cloud-upload"></i>사유제출하기</button>
+            <button type="submit" class="btn btn-danger " id="disable-reason-btn" disabled ><i class="mdi mdi-cloud-upload"></i>Submit</button>
           </div>
         </div>
       </div>
@@ -226,7 +225,7 @@
         <div class="card">
           <div class="card-header " id="headingOne">
             <h5 class="mb-0">
-              <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <h6> <i class="mdi mdi-cards-playing-outline"></i>   이용방법</h6></a>
+              <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <h6> <i class="mdi mdi-cards-playing-outline"></i>   Instruction</h6></a>
             </h5>
           </div>
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-1">
@@ -238,7 +237,7 @@
         <div class="card">
           <div class="card-header" id="headingTwo">
             <h5 class="mb-0">
-              <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">   <h6> <i class="mdi mdi-assistant"></i>   예시보기</h6> </a>
+              <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">   <h6> <i class="mdi mdi-assistant"></i>   Examples</h6> </a>
             </h5>
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-1">

@@ -1,0 +1,44 @@
+@media all and (max-width:99999px){
+
+
+.click-word{
+    color:#198ae3;
+
+}
+.main-text{
+  background-color: rgb(247, 247, 230);
+  border: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0.5rem;
+}
+.main-text p{
+  font-family: 'Times New Roman', Times, serif;}
+
+  .main-text p span{
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px dashed #b66dff;
+    border-radius: 0.25rem;
+    padding: 0.2rem ;
+    margin: 1rem 0.25rem !important;
+    line-height: 1cm;
+  }
+  .answer-display{
+    padding: 0.5rem 1rem 0 1rem !important;
+    border: 1px solid #dfd6e0;
+  }
+ 
+}
+
+
+
+/**큰 태블릿****/
+@media all and (max-width:991px){
+  .main-text{
+    margin: 0 0.5rem;
+  }
+  .popover{
+    width: 90%;
+    }
+
+}
