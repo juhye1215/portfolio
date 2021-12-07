@@ -2321,9 +2321,9 @@ body.is-preload #header footer {
 }
 #banner > div {
   float: left;
-  width: 45%;
-  padding: 1% 2%;
-  margin: 0 2%;
+  width: 48%;
+  padding: 1.5% 0.25%;
+  margin: 0 1%;
 }
 
 #banner footer {
@@ -2344,9 +2344,11 @@ body.is-preload #header footer {
   padding-bottom: 5px;
 }
 #banner .mypicture p {
-  width: 90%;
   margin: 0 auto;
   text-align: center;
+}
+#banner .mypicture p i {
+  color: yellow;
 }
 
 #banner .myskills li {
