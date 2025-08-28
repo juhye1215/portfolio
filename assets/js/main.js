@@ -179,10 +179,25 @@ $(function () {
   });
 });
 
-// 페이지 전체가 로딩될 때까지 #loader를 보여주고, 로딩이 끝나면 숨깁니다.
-window.addEventListener("load", function () {
-  var loader = document.getElementById("loader");
-  if (loader) {
-    loader.style.display = "none";
-  }
+// 퍼센티지 로딩 표시
+document.addEventListener('DOMContentLoaded', function() {
+  var percent = 0;
+  var loaderPercent = document.getElementById('loader-percent');
+  var loader = document.getElementById('loader');
+  var interval = setInterval(function() {
+    percent += Math.floor(Math.random() * 7) + 3; // 3~9%씩 증가
+    if (percent >= 100) {
+      percent = 100;
+      clearInterval(interval);
+      loader.style.display = 'none';
+    }
+    loaderPercent.textContent = percent + '%';
+  }, 50);
+  window.addEventListener('load', function() {
+    percent = 100;
+    loaderPercent.textContent = '100%';
+    setTimeout(function() {
+      loader.style.display = 'none';
+    }, 300);
+  });
 });
