@@ -1996,6 +1996,9 @@ button.style3:hover,
   left: 0 !important;
   width: 100% !important;
   height: auto !important;
+  object-position: top;
+  object-fit:cover;
+  max-height: 300px;
 }
 
 .box.style1 .image img {
@@ -2267,10 +2270,16 @@ body.is-preload #header footer {
 
 /* Banner */
 .banner-bg {
-  background: url("images/blue-bg\(800h\).png") center center no-repeat;
+  background: linear-gradient(
+    180deg,
+    #111 0%,
+    #4f5b6b 45%,
+    #4f5b6b 55%,
+    #1a1333 100%
+  );
   background-size: cover;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 #banner {
@@ -2337,7 +2346,8 @@ body.is-preload #header footer {
   margin-top: 1.5rem;
 }
 #banner .mypicture img {
-  border-radius: 50%;
+  width: 100%;
+  max-width: 300px;
   margin: 2% 0;
 }
 #banner h2 {
@@ -2345,10 +2355,14 @@ body.is-preload #header footer {
 }
 #banner .mypicture p {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  
 }
 #banner .mypicture p i {
   color: yellow;
+  text-align: center !important;
 }
 
 #banner .myskills li {
@@ -2723,6 +2737,7 @@ body.is-preload #header footer {
   }
   .portfolio .inner h5 {
     font-size: 15px;
+
   }
 
   .mywork {
