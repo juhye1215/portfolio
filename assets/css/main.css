@@ -3143,7 +3143,7 @@ body.is-preload #header footer {
 .spinner {
   width: 64px;
   height: 64px;
-  background: url("images/spinner.png") no-repeat center center;
+  background: url("images/Spinner.png") no-repeat center center;
   background-size: contain;
   animation: spin 1s linear infinite;
   margin-bottom: 24px;
@@ -3154,14 +3154,7 @@ body.is-preload #header footer {
   text-align: center;
   opacity: 0.85;
 }
-#loader-percent{
-  color: #fff;
-  font-size:1.5rem;
-  letter-spacing: 1px;  
-  text-align: center;
-  margin-top: 8px;
-  opacity: 0.75;
-}
+
 @keyframes spin {
   100% { transform: rotate(360deg); }
 }
