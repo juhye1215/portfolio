@@ -4,104 +4,96 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+(function ($) {
+  var $window = $(window),
+    $body = $("body"),
+    settings = {
+      // Parallax background effect?
+      parallax: true,
 
-	var	$window = $(window),
-		$body = $('body'),
-		settings = {
+      // Parallax factor (lower = more intense, higher = less intense).
+      parallaxFactor: 10,
+    };
 
-			// Parallax background effect?
-				parallax: true,
+  // Breakpoints.
+  breakpoints({
+    wide: ["1081px", "1680px"],
+    normal: ["841px", "1080px"],
+    narrow: ["737px", "840px"],
+    mobile: [null, "736px"],
+  });
 
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 10
+  // Mobile?
+  if (browser.mobile) $body.addClass("is-scroll");
 
-		};
+  // Play initial animations on page load.
+  $window.on("load", function () {
+    window.setTimeout(function () {
+      $body.removeClass("is-preload");
+    }, 100);
+  });
 
-	// Breakpoints.
-		breakpoints({
-			wide:    [ '1081px',  '1680px' ],
-			normal:  [ '841px',   '1080px' ],
-			narrow:  [ '737px',   '840px'  ],
-			mobile:  [ null,      '736px'  ]
-		});
+  // Scrolly.
+  $(".scrolly-middle").scrolly({
+    speed: 1000,
+    anchor: "middle",
+  });
 
-	// Mobile?
-		if (browser.mobile)
-			$body.addClass('is-scroll');
+  $(".scrolly").scrolly({
+    speed: 1000,
+    offset: function () {
+      return breakpoints.active("<=mobile") ? 70 : 190;
+    },
+  });
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  // Parallax background.
 
-	// Scrolly.
-		$('.scrolly-middle').scrolly({
-			speed: 1000,
-			anchor: 'middle'
-		});
+  // Disable parallax on IE/Edge (smooth scrolling is jerky), and on mobile platforms (= better performance).
+  if (browser.name == "ie" || browser.name == "edge" || browser.mobile)
+    settings.parallax = false;
 
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() { return (breakpoints.active('<=mobile') ? 70 : 190); }
-		});
+  if (settings.parallax) {
+    var $dummy = $(),
+      $bg;
 
-	// Parallax background.
+    $window
+      .on("scroll.overflow_parallax", function () {
+        // Adjust background position.
+        $bg.css(
+          "background-position",
+          "center " +
+            -1 * (parseInt($window.scrollTop()) / settings.parallaxFactor) +
+            "px"
+        );
+      })
+      .on("resize.overflow_parallax", function () {
+        // If we're in a situation where we need to temporarily disable parallax, do so.
+        if (breakpoints.active("<=narrow")) {
+          $body.css("background-position", "");
+          $bg = $dummy;
+        }
 
-		// Disable parallax on IE/Edge (smooth scrolling is jerky), and on mobile platforms (= better performance).
-			if (browser.name == 'ie'
-			||	browser.name == 'edge'
-			||	browser.mobile)
-				settings.parallax = false;
+        // Otherwise, continue as normal.
+        else $bg = $body;
 
-		if (settings.parallax) {
+        // Trigger scroll handler.
+        $window.triggerHandler("scroll.overflow_parallax");
+      })
+      .trigger("resize.overflow_parallax");
+  }
 
-			var $dummy = $(), $bg;
-
-			$window
-				.on('scroll.overflow_parallax', function() {
-
-					// Adjust background position.
-						$bg.css('background-position', 'center ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-
-				})
-				.on('resize.overflow_parallax', function() {
-
-					// If we're in a situation where we need to temporarily disable parallax, do so.
-						if (breakpoints.active('<=narrow')) {
-
-							$body.css('background-position', '');
-							$bg = $dummy;
-
-						}
-
-					// Otherwise, continue as normal.
-						else
-							$bg = $body;
-
-					// Trigger scroll handler.
-						$window.triggerHandler('scroll.overflow_parallax');
-
-				})
-				.trigger('resize.overflow_parallax');
-
-		}
-
-	// Poptrox.
-		$('.gallery').poptrox({
-			useBodyOverflow: false,
-			usePopupEasyClose: false,
-			overlayColor: '#0a1919',
-			overlayOpacity: 0.75,
-			usePopupDefaultStyling: false,
-			usePopupCaption: true,
-			popupLoaderText: '',
-			windowMargin: 10,
-			usePopupNav: true
-		});
-
+  // Poptrox.
+  $(".gallery").poptrox({
+    useBodyOverflow: false,
+    usePopupEasyClose: false,
+    overlayColor: "#0a1919",
+    overlayOpacity: 0.75,
+    usePopupDefaultStyling: false,
+    usePopupCaption: true,
+    popupLoaderText: "",
+    windowMargin: 10,
+    usePopupNav: true,
+  });
 })(jQuery);
 
 //막대그래프
@@ -137,69 +129,60 @@ function drawGraph(obj) {
 
 //contact me
 
-$(function()
-{
-    function after_form_submitted(data) 
-    {
-        if(data.result == 'success')
-        {
-            $('form#reused_form').hide();
-            $('#success_message').show();
-            $('#error_message').hide();
+$(function () {
+  function after_form_submitted(data) {
+    if (data.result == "success") {
+      $("form#reused_form").hide();
+      $("#success_message").show();
+      $("#error_message").hide();
+    } else {
+      $("#error_message").append("<ul></ul>");
+
+      jQuery.each(data.errors, function (key, val) {
+        $("#error_message ul").append("<li>" + key + ":" + val + "</li>");
+      });
+      $("#success_message").hide();
+      $("#error_message").show();
+
+      //reverse the response on the button
+      $('button[type="button"]', $form).each(function () {
+        $btn = $(this);
+        label = $btn.prop("orig_label");
+        if (label) {
+          $btn.prop("type", "submit");
+          $btn.text(label);
+          $btn.prop("orig_label", "");
         }
-        else
-        {
-            $('#error_message').append('<ul></ul>');
+      });
+    } //else
+  }
 
-            jQuery.each(data.errors,function(key,val)
-            {
-                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
-            });
-            $('#success_message').hide();
-            $('#error_message').show();
+  $("#reused_form").submit(function (e) {
+    e.preventDefault();
 
-            //reverse the response on the button
-            $('button[type="button"]', $form).each(function()
-            {
-                $btn = $(this);
-                label = $btn.prop('orig_label');
-                if(label)
-                {
-                    $btn.prop('type','submit' ); 
-                    $btn.text(label);
-                    $btn.prop('orig_label','');
-                }
-            });
-            
-        }//else
-    }
+    $form = $(this);
+    //show some response on the button
+    $('button[type="submit"]', $form).each(function () {
+      $btn = $(this);
+      $btn.prop("type", "button");
+      $btn.prop("orig_label", $btn.text());
+      $btn.text("Sending ...");
+    });
 
-	$('#reused_form').submit(function(e)
-      {
-        e.preventDefault();
-
-        $form = $(this);
-        //show some response on the button
-        $('button[type="submit"]', $form).each(function()
-        {
-            $btn = $(this);
-            $btn.prop('type','button' ); 
-            $btn.prop('orig_label',$btn.text());
-            $btn.text('Sending ...');
-        });
-        
-
-                    $.ajax({
-                type: "POST",
-                url: 'handler.php',
-                data: $form.serialize(),
-                success: after_form_submitted,
-                dataType: 'json' 
-            });        
-        
-      });	
+    $.ajax({
+      type: "POST",
+      url: "handler.php",
+      data: $form.serialize(),
+      success: after_form_submitted,
+      dataType: "json",
+    });
+  });
 });
 
-
-
-
+// 페이지 전체가 로딩될 때까지 #loader를 보여주고, 로딩이 끝나면 숨깁니다.
+window.addEventListener("load", function () {
+  var loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.display = "none";
+  }
+});

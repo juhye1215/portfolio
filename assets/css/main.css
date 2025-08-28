@@ -3128,3 +3128,24 @@ body.is-preload #header footer {
     }
   }
 }
+/** 스피너 스타일 추가*/
+#loader {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: #111;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spinner {
+  width: 64px;
+  height: 64px;
+  background: url("images/Spinner.png") no-repeat center center;
+  background-size: contain;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
